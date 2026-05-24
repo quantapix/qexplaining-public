@@ -28,6 +28,61 @@ topic is **shootable order** — earlier subjects motivate later ones.
 
 ---
 
+## Status — 2026-05-24
+
+Five-episode sprint week kickoff. The week's lock is **1.0 + 1.1 +
+1.5 + 2.1 + 1.7** end-to-end — the first four are pole-position
+production episodes ready to ship; 1.7 (Civil RICO walkthrough) is
+the channel's first greenfield full-quad authoring under the
+layered-scaffolding pipeline.
+
+- **Production-phasing spec adopted** (2026-05-19). The earlier
+  monolithic `assemble.py` driver is retired channel-wide.
+  Replaced by a 7-script per-episode pipeline
+  (`phase{0,1,3,5,6,8,9}_*.py`) running under a 12-phase operator
+  runsheet — pre-flight, assembly, captioning, decoration, scoring,
+  mastering, review render, cut review, final render, shorts pickup,
+  rescue, upload. Each phase ends in an explicit playback gate;
+  later phases never silently override earlier decisions. Spec at
+  `data/specs/production-phasing-2026-05-19.md`.
+- **All three earlier production episodes migrated** (1.1 + 1.5 +
+  2.1). Same 7-phase shape across the channel; per-episode
+  `PRODUCTION.md` runsheets are the operator's source of truth.
+- **Real-Janet 3-avatar production set** locked since 2026-05-11.
+  Three HeyGen Photo Avatars trained from real-Janet source stills,
+  rotated per beat-archetype: priority 1 hand-down (channel default;
+  declarative narration spine), priority 2 hand-up (contemplative
+  beats), priority 3 head + shoulders (PIP / lower-third / B-roll
+  cutaway). Voice unchanged: Janet-2 Design-a-Voice (locked
+  2026-05-07). Pose rotation is per-episode creative texture, not
+  identity drift — any change to the three pinned avatar IDs is a
+  channel-rebrand event.
+- **1.0 channel-preview** upgrades to the full 7-phase shape this
+  week. Today it carries a preview-light single-take A-roll path; the
+  upgrade brings it under the same operator runsheet as 1.1+, so the
+  channel has one production shape, not two.
+- **1.7 Civil RICO walkthrough** enters full production. Episode
+  ships with the channel's first **Blender Geometry-Nodes plate**
+  (G3 — a `p4m` recursive tessellation as the visual metaphor for
+  RICO's "pattern" element) rendered via the typed `blendr._cli`
+  wrapper alongside the standard Remotion B-roll. Two-lane delivery:
+  Remotion components for G1, G2, G4, G5, G6 and the cards;
+  Blender-rendered PNG for G3.
+
+What's coming up:
+
+- Five-episode end-of-week ship target: 1.0 / 1.1 / 1.5 / 2.1 / 1.7
+  all uploaded to `videos.quantapix.com` and the YouTube channel,
+  24-h unlisted hold before public flip.
+- Channel-page Claude Design additive bundle (5 playlist covers +
+  channel-trailer end-frame composite, dual aspect).
+- Reshoot of the 1.0 and 1.1 narration tracks against the
+  rebalanced three-avatar pose rotation (no copy changes — the
+  existing scripts hold; the visual variety lift is on the
+  pose-rotation mix per beat).
+
+---
+
 ## Status — 2026-05-17
 
 The three production episodes (1.1 + 1.5 + 2.1) have crossed the
@@ -245,21 +300,25 @@ Per-video deliverables follow a seven-file shape under
 - `FUSION-NOTES.md` — per-episode Fusion-comp keyframe schedule
   (S5 PIP corner / S6 Shorts inset band / S7 trust-boundary
   glow), color-page guard, SFX placement, music-bed register.
-- `PRODUCTION.md` — 10-phase operator runsheet from pre-flight
-  through upload (markers → Resolve → assembly → channel-bed
-  + SFX + music → Remotion B-roll → Fusion → finishing →
-  render → cuts rescue → upload).
+- `PRODUCTION.md` — 12-phase operator runsheet from pre-flight
+  through upload (pre-flight → assembly → captioning →
+  decoration → scoring → mastering → review render → cut review
+  → final render → shorts pickup → rescue → upload). Each phase
+  ends in an explicit playback gate.
 - `heygen-aroll.md` — per-beat HeyGen call payloads (one
   `create_video_from_avatar` payload per script beat) plus
   per-take acceptance gate.
 
-Plus two Python siblings (`assemble.py` — wrapper-consumer driver;
-`retime_markers.py` — cue-key → SRT-phrase resolver that emits
-the per-episode marker CSVs from the actual take SRTs).
+Plus seven per-phase Python drivers
+(`phase{0,1,3,5,6,8,9}_*.py`) and a marker resolver
+(`retime_markers.py` — cue-key → SRT-phrase resolver that emits
+the per-episode marker CSVs from the actual take SRTs). The
+earlier monolithic `assemble.py` driver is retired channel-wide
+as of 2026-05-19.
 
-Three episodes currently carry the full set: 1.1, 1.5, 2.1.
-Channel pilot 1.0 carries an integrated identity README and
-shares the same production architecture.
+Five episodes carry the full set this sprint week:
+1.0, 1.1, 1.5, 2.1, 1.7. Channel pilot 1.0 upgrades from the
+preview-light shape to the same 7-phase pipeline as 1.1+.
 
 ## Contact
 
