@@ -28,6 +28,79 @@ topic is **shootable order** — earlier subjects motivate later ones.
 
 ---
 
+## Status — 2026-06-01
+
+Launch day for the public donation drive; the channel's public surface
+refreshes weekly (Fridays) from here on. A consolidated current snapshot
+now lives in [`STATUS.md`](./STATUS.md); this rolling log keeps the
+per-week detail.
+
+Landed since the last entry:
+
+- **qreel shipped to main.** The one-command bake tool described in the
+  2026-05-28 entry is no longer a draft — the plugin (the `/reel <bundle>`
+  command + its Python package) is built and on the mainline, and the
+  episode-side callers have been reconciled to the shipped API. It bakes a
+  finished-script bundle to a captioned, loudness-normalized MP4 through a
+  running DaVinci Resolve session, composing the production-assistance,
+  explainer, and background-plate outputs.
+- **Cohort-2 scripts landed.** The next block of subjects (the priority
+  slots that follow the pole-position production episodes) have their
+  `script.md` + `design.md` authored, extending the layered-scaffolding
+  pipeline beyond the first sprint cohort.
+
+What's coming up:
+
+- First end-to-end `/reel` bake of a standalone bundle against a live
+  Resolve session.
+- Continue the per-episode production pipeline across the cohort-2 scripts.
+
+---
+
+## Status — 2026-05-28
+
+Design work this week on **qreel** — a one-command bake tool that turns a
+finished-script bundle into a finished video. The idea: collapse the
+multi-step Resolve finishing pass (assemble → caption → render → loudness)
+behind a single `/reel <bundle>` command that drives a running DaVinci
+Resolve session and hands back one normalized MP4.
+
+What the design locks:
+
+- **Two input modes, auto-detected.** A full explainer-episode directory, or
+  a minimal standalone bundle (a script plus a folder of clips) — the tool
+  sniffs which and dispatches accordingly. Standalone mode makes the same
+  pipeline available for ad-hoc one-offs, not just the 50-episode arc.
+- **Captions are typeset, not transcribed.** Burn-in captions are authored as
+  a vector text overlay rendered directly from the already-correct script
+  SRT, so technical terms (`Prop`, `§ 1983`, `Lean`, `RICO`) are exact by
+  construction. Speech-to-text is kept only as a fallback for bundles that
+  arrive without a caption track — it can't be spell-corrected after the
+  fact, so it's the wrong default for jargon-dense narration. This follows
+  the channel's "let the compositor draw the typography" principle.
+- **Loudness is deterministic.** The finished master is normalized to the
+  −14 LUFS / −1 dBTP voice-content target by a standard two-pass loudness
+  filter applied after render, rather than a hand-tuned mixer pass — so the
+  level is reproducible and verifiable on every bake.
+- **One finished output per run.** A single aspect per invocation (16:9 or
+  9:16); the command loops for both. The tool ends at the normalized MP4 —
+  upload stays a separate, deliberate step.
+
+The work also formalizes a dedicated **captioning phase** in the per-episode
+pipeline (authoring the text overlay from the script SRT) and trims the
+mastering phase to chapter markers, with loudness handled by the bake tool.
+The design is captured in a `qreel` spec under review; implementation is
+sequenced behind a small set of upstream Resolve-wrapper additions.
+
+What's coming up:
+
+- Promote the qreel spec out of draft and stand up the plugin scaffold.
+- Lift the subtitle-overlay routine in the Resolve wrapper (today a stub) and
+  add the new captioning-phase driver across the production episodes.
+- First end-to-end `/reel` bake of a standalone bundle against a live Resolve.
+
+---
+
 ## Status — 2026-05-24
 
 Five-episode sprint week kickoff. The week's lock is **1.0 + 1.1 +
@@ -158,8 +231,8 @@ What's coming up:
   so no hex literals leak into renders.
 - **Composition + finishing.** DaVinci Resolve Studio, scripted via
   an in-house Python wrapper plus a recipe library that turns
-  per-episode `assemble.py` drivers from ~260-line scripts into
-  ~80-line ones. The wrapper handles import, two-aspect timeline
+  per-episode Resolve drivers from ~260-line scripts into ~80-line
+  ones (now a per-phase pipeline). The wrapper handles import, two-aspect timeline
   setup, A-roll comping with breath gaps, B-roll cue placement at
   marker frames, and back-to-back YouTube-master + Shorts render.
   Fusion node-tree authoring (Janet PIP corner ring + soft shadow,
