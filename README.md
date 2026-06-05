@@ -14,6 +14,8 @@ the master plan and the scripts as they land.
 - Parent organisation: <https://github.com/quantapix>
 - Engineering output: <https://quantapix.com>
 - Motivational record: <https://femfas.net>
+- **Watch: <https://www.youtube.com/@Quantapix>** — the channel where this
+  arc publishes; first episodes landing June 2026.
 
 ## Profile-area tags
 
@@ -25,6 +27,43 @@ topic is **shootable order** — earlier subjects motivate later ones.
 - **P3** — financial applications (analyzing + accounting → Qresev)
 - **P4** — grounding competing technical-analysis approaches
 - **P5** — agentic software development (Claude Code + monorepo)
+
+---
+
+## Status — 2026-06-05
+
+Production-finishing work on the channel's first end-to-end episode (the
+hallucination-tax pilot). Two longstanding finishing bugs are now fixed, and
+the per-beat narration pipeline is consistent across the first four episodes.
+
+Landed since the last entry:
+
+- **Caption track no longer leaks.** The earlier approach hosted the burned-in
+  caption composite on a portrait presenter take, and that take-hosted comp
+  leaked its own source full-frame at render — the "two presenters" artifact.
+  The fix bakes the assembled caption track into a few short **transparent
+  intermediate overlays** and tiles them onto a fresh top track: plain alpha
+  media, no take-hosted comp, nothing to leak. The same caption file is now
+  both the upload sidecar and the bake source, so on-screen text and the
+  uploaded captions can't drift.
+- **PIP wipe-transition replaces the parked gap-holder.** Keeping the
+  presenter corner continuously filled between beats used to need a gap-holder
+  clip, which tripped the same take-host leak and got parked. It's removed
+  entirely. The replacement overlaps adjacent presenter takes on two video
+  tracks and wipes between them; because it's hosted on picture-in-picture
+  clips rather than a full-frame take, it's leak-safe by construction.
+- **Phrase-anchored re-timing across the pole-position episodes.** Per-beat
+  takes carry a short trailing-silence handle so neighboring clips overlap
+  cleanly, and cue timings re-anchor to the actual narrated phrase boundaries
+  (with a small tail-guard) rather than segment indices — re-renders
+  re-segment, so anchoring by phrase text is the stable contract. This
+  pipeline is now wired across the first four episodes, not just the pilot.
+
+What's coming up:
+
+- First end-to-end finishing run on the pilot with the new caption bake and
+  wipe-transition in place.
+- Carry the per-beat re-timing pipeline across the second cohort of scripts.
 
 ---
 

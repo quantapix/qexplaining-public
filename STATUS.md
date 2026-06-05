@@ -1,6 +1,6 @@
 # qexplaining-public — status
 
-_Snapshot: 2026-06-01. Refreshed weekly (Fridays) during the
+_Snapshot: 2026-06-05. Refreshed weekly (Fridays) during the
 2026-06-01 → 2026-12-01 drive window._
 
 Release-narrative status of the 50-video explainer arc (5 topics × 10
@@ -37,25 +37,35 @@ graphic** — rendering, voice, and finishing run in separate pipelines.
 
 ## What landed recently
 
-- **qreel shipped to main** — a one-command bake tool (`/reel <bundle>`)
-  that collapses the multi-step finishing pass (assemble → caption → render
-  → loudness) behind a single command driving a running editor session and
-  handing back one normalized MP4. Two input modes (a full episode
-  directory, or a minimal standalone bundle), auto-detected. The
-  episode-side callers are reconciled to the shipped API.
+- **Caption track no longer leaks** — captions are baked into short
+  transparent intermediate overlays and tiled onto a fresh top track instead
+  of being hosted on a presenter take, which had leaked its source full-frame
+  at render. One caption file now serves both as the upload sidecar and the
+  bake source, so on-screen and uploaded captions can't drift.
+- **PIP wipe-transition** — the presenter corner stays continuously filled
+  between beats by overlapping adjacent takes on two tracks and wiping between
+  them, hosted on picture-in-picture clips so it's leak-safe; this retires the
+  earlier parked gap-holder approach.
+- **Phrase-anchored re-timing** — per-beat takes carry a trailing-silence
+  handle for clean overlaps, and cue timings re-anchor to narrated phrase
+  boundaries rather than segment indices (re-renders re-segment). Wired across
+  the first four episodes.
+- **qreel shipped to main** — a one-command bake tool that collapses the
+  multi-step finishing pass (assemble → caption → render → loudness) behind a
+  single command driving a running editor session and handing back one
+  normalized MP4; two input modes (a full episode directory, or a minimal
+  standalone bundle), auto-detected; episode-side callers reconciled to the
+  shipped API.
 - **Production-phasing** — the earlier monolithic per-episode driver is
-  retired channel-wide in favor of a per-phase pipeline + a 12-phase
-  operator runsheet.
-- **Cohort-2 scripts** — the next block of subjects authored (script +
-  design), extending the layered-scaffolding pipeline beyond the first
-  sprint cohort.
+  retired channel-wide in favor of a per-phase pipeline + a multi-phase
+  operator runsheet, each phase ending in an explicit playback gate.
 
 ## Next
 
-- First end-to-end `/reel` bake of a standalone bundle against a live editor
-  session.
-- Carry the per-episode pipeline across the cohort-2 scripts; ship the first
-  sprint cohort to the channel.
+- First end-to-end finishing run on the pilot with the new caption bake and
+  wipe-transition in place.
+- Carry the per-beat re-timing pipeline across the second cohort of scripts;
+  ship the first sprint cohort to the channel.
 
 ## How to verify
 
