@@ -1,6 +1,6 @@
 # qexplaining-public — status
 
-_Snapshot: 2026-06-05. Refreshed weekly (Fridays) during the
+_Snapshot: 2026-06-12. Refreshed weekly (Fridays) during the
 2026-06-01 → 2026-12-01 drive window._
 
 Release-narrative status of the 50-video explainer arc (5 topics × 10
@@ -10,11 +10,14 @@ consolidated current snapshot.
 
 ## Overall
 
-**In production.** The master plan (all 50 subjects, profile-area tagged,
-in shootable order) is locked; the per-episode production pipeline is
-operational; the first sprint cohort plus a second cohort of scripts are
-authored. The output of the work is **scripts + the data behind every
-graphic** — rendering, voice, and finishing run in separate pipelines.
+**Live.** The channel's first two episodes are public — 1.1 "The
+hallucination tax" (2026-06-09) and 1.5 "Negative verification"
+(2026-06-11) — on YouTube (<https://www.youtube.com/@Quantapix>) and the
+channel CDN. The full roster, live and upcoming, renders at
+<https://quantapix.com/videos>. The master plan (all 50 subjects,
+profile-area tagged, in shootable order) is locked; the per-episode
+production pipeline is operational and has now reproduced the first four
+episodes end-to-end from scratch.
 
 ## Pipeline
 
@@ -27,9 +30,13 @@ graphic** — rendering, voice, and finishing run in separate pipelines.
   module so no raw values leak into renders; plus a Geometry-Nodes
   background-plate lane for the recursive-tessellation motifs.
 - **Composition + finishing** — a scripted non-linear-editor session via an
-  in-house Python wrapper + a recipe library, now a per-phase pipeline under
-  a multi-phase operator runsheet, each phase ending in an explicit playback
-  gate.
+  in-house Python wrapper + a recipe library, a per-phase pipeline under a
+  multi-phase operator runsheet. Presenter-corner decoration runs two
+  lanes: a default headless lane that bakes the picture-in-picture
+  element, wipes, and chrome off the editor as transparent alpha
+  intermediates (leak-safe by construction), and a staging lane that keeps
+  the rich node-tree comps for interactive delivery; both read one layout
+  sidecar so they can't diverge.
 - **Captions + loudness** — captions are typeset from the already-correct
   script caption track (so technical terms are exact by construction, not
   transcribed), and loudness is normalized deterministically to the
@@ -37,39 +44,32 @@ graphic** — rendering, voice, and finishing run in separate pipelines.
 
 ## What landed recently
 
-- **Caption track no longer leaks** — captions are baked into short
-  transparent intermediate overlays and tiled onto a fresh top track instead
-  of being hosted on a presenter take, which had leaked its source full-frame
-  at render. One caption file now serves both as the upload sidecar and the
-  bake source, so on-screen and uploaded captions can't drift.
-- **PIP wipe-transition** — the presenter corner stays continuously filled
-  between beats by overlapping adjacent takes on two tracks and wiping between
-  them, hosted on picture-in-picture clips so it's leak-safe; this retires the
-  earlier parked gap-holder approach.
-- **Phrase-anchored re-timing** — per-beat takes carry a trailing-silence
-  handle for clean overlaps, and cue timings re-anchor to narrated phrase
-  boundaries rather than segment indices (re-renders re-segment). Wired across
-  the first four episodes.
-- **qreel shipped to main** — a one-command bake tool that collapses the
-  multi-step finishing pass (assemble → caption → render → loudness) behind a
-  single command driving a running editor session and handing back one
-  normalized MP4; two input modes (a full episode directory, or a minimal
-  standalone bundle), auto-detected; episode-side callers reconciled to the
-  shipped API.
-- **Production-phasing** — the earlier monolithic per-episode driver is
-  retired channel-wide in favor of a per-phase pipeline + a multi-phase
-  operator runsheet, each phase ending in an explicit playback gate.
+- **Two episodes shipped public** — 1.1 (2026-06-09) and 1.5 (2026-06-11),
+  each with a YouTube leg and an immutable CDN cut, recomputed chapters,
+  a branded outro plate, and a normalized master.
+- **The /videos roster page** — the full 5×10 plan with live/upcoming
+  states, watch links, and thumbnails, published as a JSON roster consumed
+  by the site at build time.
+- **Freeze-at-gap wipes** — muted speech handles no longer play as silent
+  talking during wipe transitions; segments outside a clip's content span
+  render held frames.
+- **Operator content marks** — per-take unfreeze/freeze source frames from
+  an operator scrub override the acoustic content spans (which freeze the
+  presenter mid-blink), with the audio timing clock bit-identical.
+- **Branded outro + channel bed** — a 20-second raster end-screen plate
+  with the next episode's tile, and a seamless low-alpha background loop
+  composited automatically.
 
 ## Next
 
-- First end-to-end finishing run on the pilot with the new caption bake and
-  wipe-transition in place.
-- Carry the per-beat re-timing pipeline across the second cohort of scripts;
-  ship the first sprint cohort to the channel.
+- Finish 1.7 (Civil RICO walkthrough) and 2.1 through the same pipeline;
+  both already carry the wipe layout and segmented caption bake.
+- Shorts pickup lane for the live episodes.
 
 ## How to verify
 
+- Watch the live episodes: the channel at
+  <https://www.youtube.com/@Quantapix>, or the CDN cuts linked from
+  <https://quantapix.com/videos>.
 - The master plan + every authored script lands in this repo as ordinary
   diffs; the commit log is the change record.
-- Finished videos publish to the channel; the public surface refreshes
-  weekly.

@@ -15,7 +15,8 @@ the master plan and the scripts as they land.
 - Engineering output: <https://quantapix.com>
 - Motivational record: <https://femfas.net>
 - **Watch: <https://www.youtube.com/@Quantapix>** — the channel where this
-  arc publishes; first episodes landing June 2026.
+  arc publishes; the first two episodes are live (June 2026), with the full
+  roster at <https://quantapix.com/videos>.
 
 ## Profile-area tags
 
@@ -29,6 +30,60 @@ topic is **shootable order** — earlier subjects motivate later ones.
 - **P5** — agentic software development (Claude Code + monorepo)
 
 ---
+
+## Status — 2026-06-12
+
+The channel is live. The first two episodes are public on YouTube and the
+channel CDN, and the full 50-video roster — live and upcoming — now renders
+at <https://quantapix.com/videos>.
+
+Landed since the last entry:
+
+- **Episode 1.1 — "The hallucination tax" — is public** (2026-06-09). The
+  pilot's first end-to-end finishing run completed: caption bake, presenter
+  wipe-transitions, branded outro plate, chapters recomputed against the
+  7:05 final cut. Watch: <https://www.youtube.com/watch?v=DDdKgzDMPzY> or
+  the CDN cut at <https://videos.quantapix.com/T1/01-hallucination-tax.mp4>.
+- **Episode 1.5 — "Negative verification" — is public** (2026-06-11). The
+  episode where the build *fails on purpose* — and the kernel's "no" is the
+  right answer. Watch: <https://www.youtube.com/watch?v=3nzYNQhL57k> or
+  <https://videos.quantapix.com/T1/05-negative-verification.mp4>.
+- **Two-lane presenter decoration.** The compositor can't render a scripted
+  node-tree comp hosted on a sourced clip headlessly — it leaks the source
+  full-frame, the same class of bug that earlier killed take-hosted captions.
+  The decoration pipeline now forks into two lanes: the default lane bakes
+  the picture-in-picture element, wipe, and corner chrome **off the editor**
+  into transparent intermediates and composites them as plain alpha media
+  (leak-safe by construction, fully headless); a second staging lane keeps
+  the rich node-tree comps for interactive delivery. All lane-common logic
+  lives in shared modules, and both lanes read one layout sidecar, so they
+  cannot diverge on where clips land.
+- **Freeze-at-gap wipes.** Per-beat takes carry short muted speech handles
+  so adjacent clips overlap cleanly — but those handles used to play as
+  silent talking during wipe transitions. Wipe segments outside a clip's
+  content span now render held frames instead.
+- **Operator content marks.** Acoustically-derived content spans tend to
+  freeze the presenter mid-blink or open-mouthed. Each episode driver can
+  now carry per-take unfreeze/freeze source frames from an operator scrub,
+  overriding the acoustic spans; the audio trim marks never move, so the
+  timing clock is bit-identical to the acoustic baseline.
+- **Branded outro plate.** A 20-second end screen with the next episode's
+  tile, composited as a flat raster plate and appended as a plain clip —
+  vector-text node-tree authoring was abandoned after missing-font blank
+  renders. Bottom corners stay clear for YouTube's native end-screen
+  elements.
+- **Channel background bed.** A seamless programmatic loop, dimmed and baked
+  to a low-alpha plate, lands on the bottom track automatically.
+- **Reproducibility.** The first four episodes were reproduced from scratch
+  through the full pipeline — the per-phase drivers plus the shared modules
+  rebuild a shipped episode end-to-end, which is the point of scripting the
+  finishing pass in the first place.
+
+What's coming up:
+
+- 1.7 (Civil RICO walkthrough) and 2.1 finish through the same pipeline —
+  both already carry the wipe layout and the segmented caption bake.
+- The Shorts pickup lane for the live episodes.
 
 ## Status — 2026-06-05
 
@@ -156,7 +211,7 @@ layered-scaffolding pipeline.
   mastering, review render, cut review, final render, shorts pickup,
   rescue, upload. Each phase ends in an explicit playback gate;
   later phases never silently override earlier decisions. Spec at
-  `data/specs/production-phasing-2026-05-19.md`.
+  `data/specs/production-phasing-2026-05-19/SPEC.md`.
 - **All three earlier production episodes migrated** (1.1 + 1.5 +
   2.1). Same 7-phase shape across the channel; per-episode
   `PRODUCTION.md` runsheets are the operator's source of truth.
@@ -313,7 +368,7 @@ fails a real production take. So far it hasn't.
 
 *Profile mix: **P2** dominant, P1 supporting, P5 cameo.*
 
-1. **The Family Court that ate the file — a real narrative-analysis use case.** [P2] A real docket, dispositions misread, a brief built on a wrong premise. Why Qnarre's first job is procedural posture.
+1. **When a docket and its record disagree — a real narrative-analysis use case.** [P2] A real docket, dispositions misread, a brief built on a wrong premise. Why Qnarre's first job is procedural posture.
 2. **What is a "narrative" formally? — predicates over named entities.** [P1, P2] A story is a graph plus a calendar. Actors, acts, edges, time; the narrative reduces to a Lean structure.
 3. **Three-zone Qnarre — input, kernel, witness.** [P2, P5] A tour of the live `/app` island: docx/text in (left), kernel elaboration (middle), witness + fail trace (right).
 4. **SSE event streaming — watching a proof elaborate live.** [P2, P5] 12 seconds of a real Lean elaboration as a stream of `{stage, msg, kind}` events; the events drive the React island's colors.
