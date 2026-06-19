@@ -15,7 +15,7 @@ the master plan and the scripts as they land.
 - Engineering output: <https://quantapix.com>
 - Motivational record: <https://femfas.net>
 - **Watch: <https://www.youtube.com/@Quantapix>** — the channel where this
-  arc publishes; the first two episodes are live (June 2026), with the full
+  arc publishes; the first four episodes are live (June 2026), with the full
   roster at <https://quantapix.com/videos>.
 
 ## Profile-area tags
@@ -30,6 +30,44 @@ topic is **shootable order** — earlier subjects motivate later ones.
 - **P5** — agentic software development (Claude Code + monorepo)
 
 ---
+
+## Status — 2026-06-19
+
+Four episodes are now public on YouTube and the channel CDN — up from two at the
+last entry. The full 50-video roster (live and upcoming) renders at
+<https://quantapix.com/videos>.
+
+Landed since the last entry:
+
+- **Episode 1.7 — "Civil RICO, End to End" — is public.** A single complaint
+  reduced to a Prop: person → predicate acts → enterprise → pattern → the
+  statutory elements, each one a provable lemma. The episode carries the
+  channel's first Geometry-Nodes background plate (a recursive tessellation as
+  the visual metaphor for the "pattern" element). Watch:
+  <https://www.youtube.com/watch?v=FSC5ajwOfUk> or the CDN cut at
+  <https://videos.quantapix.com/T1/07-civil-rico-walkthrough.mp4>.
+- **Episode 2.1 — "When a docket and its record disagree" — is public.** The
+  first Topic-2 episode: a real narrative-analysis use case where a docket and
+  its record disagree, and why the verifier's first job is procedural posture.
+  Watch: <https://www.youtube.com/watch?v=boe2ZwizQWM> or
+  <https://videos.quantapix.com/T2/01-docket-record-disagree.mp4>.
+- **Purpose-built Shorts, not re-cuts.** The Shorts lane changed shape. A short
+  is now its own ≤2-minute hook-and-payoff with a dedicated vertical take — not
+  a mechanical re-cut of the long form. The earlier derivative model (re-slicing
+  long-form beats into a vertical timeline) is retired. Fourteen subjects across
+  the roster carry a locked short title; the first cohort (the four built long
+  episodes) gets shorts first, and the rest follow as their long forms ship.
+- **The first short is produced.** The 1.1 short — "The Hallucination Tax" — runs
+  through the new off-editor decoration and outro lane end-to-end.
+- **Roster titles locked.** Every long-form subject title (and the short titles
+  where one exists) is now fixed. Titles are metadata: the on-disk position id
+  never changes when a title is reworded, so a title edit never triggers a rename
+  cascade and the public URL carries only the cleared phrasing.
+
+What's coming up:
+
+- Shorts for the remaining live episodes (1.5, 1.7, 2.1).
+- The next block of Topic-1 and Topic-2 episodes through the same pipeline.
 
 ## Status — 2026-06-12
 
@@ -351,16 +389,16 @@ fails a real production take. So far it hasn't.
 
 *Profile mix: **P1** dominant, P2 / P3 supporting.*
 
-1. **The hallucination tax — where LLMs lose at high stakes.** [P1] A complaint that hinges on a § 1983 element the model "remembered wrong"; probabilistic recall vs. provable derivation; the cost curve as stakes rise.
-2. **What semantic search actually does (and doesn't).** [P1, P5] Cosine similarity demoed as a magic trick that's not magic; embeddings cluster, they do not derive.
-3. **The Lean4 kernel — a 10kloc oracle for proof correctness.** [P1] "Every proof is checked by a program small enough to read." Type checker as the trust boundary; one `.lean` file's type elaboration *is* the verdict.
-4. **Predicates as the LLM-Lean bridge — where judgment lives.** [P1] Not the kernel, not the LLM — the markdown predicate. Three-layer split: kernel + predicate sub-agents + thin driver; each predicate has provenance + cite + question.
-5. **Negative verification — when the kernel says "no, that's not RICO."** [P1, P2] The demo where the build *fails*, and that's the right answer. `sorry` on the affected theorem; other theories still elaborate.
-6. **Axioms vs. evidence — why we don't trust the LLM with everything.** [P1] Which knobs are policy, which are facts, which are model output. Axioms first-class with cite + scope; LLM output never enters the trust base.
-7. **Civil RICO walkthrough — predicate, sub-axioms, verdict.** [P1, P2] A single complaint reduced to a Prop. Person → predicate acts → enterprise → pattern → § 1962 elements; each one a provable lemma.
-8. **Title VI walkthrough — discriminatory intent has structure.** [P1, P2] "Intent" sounds soft. It isn't. Protected class, recipient of federal funds, intentional treatment, causation; predicates render each as a question with required cites.
-9. **Why this scales to financial contracts (and on to TREND / MOMENTUM).** [P1, P3] Same machinery, different axioms. TREND, MOMENTUM, OPTIONS-RISK, SECTOR, DRAWDOWN as kernel-checkable predicate vocabularies over an OHLCV trace.
-10. **The cost — latency, surface area, and auditability as a feature.** [P1, P5] 30s elaboration vs. 1s vector search; predicate library upkeep; but every result ships with a witness.
+1. **The Hallucination Tax — Where LLMs Lose at High Stakes** [P1] A complaint that hinges on a § 1983 element the model "remembered wrong"; probabilistic recall vs. provable derivation; the cost curve as stakes rise. · Short: "The Hallucination Tax"
+2. **What Semantic Search Actually Does — and What It Can't** [P1, P5] Cosine similarity demoed as a magic trick that's not magic; embeddings cluster, they do not derive.
+3. **The Lean4 Kernel — a 10kloc Oracle for Proof Correctness** [P1] "Every proof is checked by a program small enough to read." Type checker as the trust boundary; one `.lean` file's type elaboration *is* the verdict. · Short: "The 10,000-Line Checker"
+4. **Predicates — Where Judgment Lives Between LLM and Kernel** [P1] Not the kernel, not the LLM — the markdown predicate. Three-layer split: kernel + predicate sub-agents + thin driver; each predicate has provenance + cite + question.
+5. **Negative Verification — When the Kernel Says "Not Proven"** [P1, P2] The demo where the build *fails*, and that's the right answer. `sorry` on the affected theorem; other theories still elaborate. · Short: "When the Kernel Won't Sign Off"
+6. **Axioms vs. Evidence — What We Don't Trust the LLM With** [P1] Which knobs are policy, which are facts, which are model output. Axioms first-class with cite + scope; LLM output never enters the trust base.
+7. **Civil RICO, End to End — Predicate, Sub-Axioms, § 1962 Elements** [P1, P2] A single complaint reduced to a Prop. Person → predicate acts → enterprise → pattern → § 1962 elements; each one a provable lemma. · Short: "What Makes a 'Pattern'"
+8. **Title VI — Discriminatory Intent Has Structure** [P1, P2] "Intent" sounds soft. It isn't. Protected class, recipient of federal funds, intentional treatment, causation; predicates render each as a question with required cites.
+9. **Same Kernel, Different Axioms — Scaling to Financial Contracts** [P1, P3] Same machinery, different axioms. TREND, MOMENTUM, OPTIONS-RISK, SECTOR, DRAWDOWN as kernel-checkable predicate vocabularies over an OHLCV trace.
+10. **The Cost — Latency, Surface Area, and Auditability as a Feature** [P1, P5] 30s elaboration vs. 1s vector search; predicate library upkeep; but every result ships with a witness.
 
 ---
 
@@ -368,16 +406,16 @@ fails a real production take. So far it hasn't.
 
 *Profile mix: **P2** dominant, P1 supporting, P5 cameo.*
 
-1. **When a docket and its record disagree — a real narrative-analysis use case.** [P2] A real docket, dispositions misread, a brief built on a wrong premise. Why Qnarre's first job is procedural posture.
-2. **What is a "narrative" formally? — predicates over named entities.** [P1, P2] A story is a graph plus a calendar. Actors, acts, edges, time; the narrative reduces to a Lean structure.
-3. **Three-zone Qnarre — input, kernel, witness.** [P2, P5] A tour of the live `/app` island: docx/text in (left), kernel elaboration (middle), witness + fail trace (right).
-4. **SSE event streaming — watching a proof elaborate live.** [P2, P5] 12 seconds of a real Lean elaboration as a stream of `{stage, msg, kind}` events; the events drive the React island's colors.
-5. **From DOCX to Lean — how a complaint becomes a claim object.** [P2] A paragraph of pleading mapped to four structured predicates. Extraction → predicate match → axiom selection → theorem assembly.
-6. **`RAv:p` record citations — when the appendix is the source of truth.** [P2] Every assertion carries `RAII:203`. 10-vol Combined Record Appendix; ground-truth pagination by footer stamp; never cite raw filings on appeal.
-7. **Pro se on appeal — why ordinary people need this.** [P2] The asymmetry between counsel and pro se on procedural traps. Rule 4(a), tolling motions, the SO 2-99 page ceiling — encoded as predicates so a brief doesn't trip them.
-8. **Counterfactual narratives — what a defense story has to deny.** [P1, P2] Every theorem has a contrapositive. Opposing counsel's narrative as a competing predicate set; Qnarre shows which axioms they would need.
-9. **Federal civil RICO + § 1983 — stacking predicates.** [P1, P2] One fact pattern, two statutory frames, one kernel. Shared facts file, framework-specific axioms, theorems compose.
-10. **What Qnarre never does — write your brief for you.** [P2, P5] The verifier's modesty. Predicates check, witnesses cite, but legal-strategy and prose are the lawyer's; auditability over autonomy.
+1. **When a Docket and Its Record Disagree — Why I Built Qnarre** [P2] A real docket, dispositions misread, a brief built on a wrong premise. Why Qnarre's first job is procedural posture. · Short: "When the Docket and the Record Disagree"
+2. **What a "Narrative" Is, Formally — Predicates Over Named Entities** [P1, P2] A story is a graph plus a calendar. Actors, acts, edges, time; the narrative reduces to a Lean structure.
+3. **Three-Zone Qnarre — Input, Kernel, Witness** [P2, P5] A tour of the live `/app` island: docx/text in (left), kernel elaboration (middle), witness + fail trace (right).
+4. **Watching a Proof Elaborate Live — SSE Event Streaming** [P2, P5] 12 seconds of a real Lean elaboration as a stream of `{stage, msg, kind}` events; the events drive the React island's colors.
+5. **From DOCX to Lean — How a Complaint Becomes a Claim Object** [P2] A paragraph of pleading mapped to four structured predicates. Extraction → predicate match → axiom selection → theorem assembly.
+6. **When the Appendix Is the Source of Truth — RAv:p Record Citations** [P2] Every assertion carries `RAII:203`. 10-vol Combined Record Appendix; ground-truth pagination by footer stamp; never cite raw filings on appeal.
+7. **Pro Se on Appeal — Encoding the Procedural Traps as Predicates** [P2] The asymmetry between counsel and pro se on procedural traps. Rule 4(a), tolling motions, the SO 2-99 page ceiling — encoded as predicates so a brief doesn't trip them. · Short: "The Procedural Traps, Made Explicit"
+8. **Counterfactual Narratives — What a Defense Story Has to Deny** [P1, P2] Every theorem has a contrapositive. Opposing counsel's narrative as a competing predicate set; Qnarre shows which axioms they would need.
+9. **Stacking Predicates — Civil RICO and § 1983 Over One Fact File** [P1, P2] One fact pattern, two statutory frames, one kernel. Shared facts file, framework-specific axioms, theorems compose.
+10. **What Qnarre Never Does — Write Your Brief for You** [P2, P5] The verifier's modesty. Predicates check, witnesses cite, but legal-strategy and prose are the lawyer's; auditability over autonomy.
 
 ---
 
@@ -385,16 +423,16 @@ fails a real production take. So far it hasn't.
 
 *Profile mix: **P3** dominant, P1 + P4 supporting.*
 
-1. **Backtests lie — the survivorship + look-ahead industry.** [P3] A hand-picked equity curve that explodes when delisted names are removed. Where standard backtests cheat; what a kernel-checked evaluator must refuse.
-2. **Six defined-risk strategies, hard refusal of everything else.** [P3] "We won't even compute it" for naked options. Long calls/puts, debit spreads, covered calls, protective puts — the allow-list.
-3. **TREND, MOMENTUM, OPTIONS-RISK, SECTOR, DRAWDOWN — five frameworks.** [P3, P1] A portfolio is judged five ways at once. Each framework a Lean theorem set with its own predicate library.
-4. **Why sector-cap claims need a kernel, not a spreadsheet.** [P3] "Max 25% Tech" — under whose definition? GICS sectors as the only acceptable referent; canonical 11 names; cap is a provable predicate.
-5. **OHLCV parquet hub — the same bars feed every framework.** [P3, P4] One bar schema, ten consumers. `{ts, o, h, l, c, v, adj_c}`; vendor names die at the boundary.
-6. **Live evaluator walkthrough — portfolio in, verdict + witness out.** [P3] 90 seconds of Qresev rendering verdicts on a 10-name portfolio. SSE events tagged by framework; the witness card carries the cite chain.
-7. **Drawdown as a theorem — the conservative PM's mandate.** [P3] "No drawdown > 8%" is a Prop, not a wish. How the predicate phrases historical drawdown; how a conservative PM uses it as a precondition.
-8. **Where the LLM lives — predicate judgments over price action.** [P1, P3] A chart segment, a question, an answer with a cite. Structured-output prompts return JSON predicate values; never free text into the kernel.
-9. **Aggressive vs. conservative — same kernel, different axioms.** [P3] Three PMs disagree. The kernel doesn't. Per-PM `risk_policy.md` becomes per-PM axiom set; same theorems, different verdicts.
-10. **What Qresev refuses — naked options, leverage, look-ahead.** [P3] Refusal as a feature. UI hard-refuse on disallowed legs; kernel rejection on look-ahead reads.
+1. **Backtests Lie — the Survivorship and Look-Ahead Problem** [P3] A hand-picked equity curve that explodes when delisted names are removed. Where standard backtests cheat; what a kernel-checked evaluator must refuse. · Short: "Why That Backtest Is Lying"
+2. **Six Defined-Risk Strategies — and a Hard Refusal of the Rest** [P3] "We won't even compute it" for naked options. Long calls/puts, debit spreads, covered calls, protective puts — the allow-list. · Short: "The Six It Will Compute, and Nothing Else"
+3. **Five Frameworks — TREND, MOMENTUM, OPTIONS-RISK, SECTOR, DRAWDOWN** [P3, P1] A portfolio is judged five ways at once. Each framework a Lean theorem set with its own predicate library.
+4. **Why a Sector Cap Needs a Kernel, Not a Spreadsheet** [P3] "Max 25% Tech" — under whose definition? GICS sectors as the only acceptable referent; canonical 11 names; cap is a provable predicate.
+5. **One Bar Schema, Ten Consumers — the OHLCV Parquet Hub** [P3, P4] One bar schema, ten consumers. `{ts, o, h, l, c, v, adj_c}`; vendor names die at the boundary.
+6. **Portfolio In, Verdict and Witness Out — Qresev Live** [P3] 90 seconds of Qresev rendering verdicts on a 10-name portfolio. SSE events tagged by framework; the witness card carries the cite chain.
+7. **Drawdown as a Theorem — the Conservative Mandate as a Prop** [P3] "No drawdown > 8%" is a Prop, not a wish. How the predicate phrases historical drawdown; how a conservative PM uses it as a precondition. · Short: "'No Drawdown Over 8%' as a Checkable Claim"
+8. **Where the LLM Lives — Predicate Judgments Over Price Action** [P1, P3] A chart segment, a question, an answer with a cite. Structured-output prompts return JSON predicate values; never free text into the kernel.
+9. **Three PMs Disagree, the Kernel Doesn't — Per-PM Axioms** [P3] Three PMs disagree. The kernel doesn't. Per-PM `risk_policy.md` becomes per-PM axiom set; same theorems, different verdicts.
+10. **What Qresev Refuses — Naked Options, Leverage, Look-Ahead** [P3] Refusal as a feature. UI hard-refuse on disallowed legs; kernel rejection on look-ahead reads.
 
 ---
 
@@ -402,16 +440,16 @@ fails a real production take. So far it hasn't.
 
 *Profile mix: **P4** dominant, P3 + P5 supporting.*
 
-1. **The TA bestiary — 117 indicators, mostly redundant.** [P4] Scrolling the catalog with a counter that ends at 117. The indicator-inflation problem; equivalence classes hidden in plain sight.
-2. **TA-Lib as ground truth — the MACD EMA-realignment quirk.** [P4] A "wrong" MACD that's actually right. TA-Lib realigns both EMAs to slow-1; naive subtraction misses by one bar; parity is non-negotiable.
-3. **DuckDB + Parquet — why columnar beats row-store for bars.** [P4, P5] "10 years of bars in 30 ms." Column-oriented IO, predicate pushdown, single-file portability.
-4. **Lightweight-charts v5 — rendering 10y of bars at 60fps.** [P4] The chart that doesn't blink at zoom-out. Pinned via npm at `5.2.0`; canvas-only rendering; v5 shape.
-5. **Aggregators — small-multiples, heatmaps, Three.js surfaces.** [P4] From one symbol to a sector. Tab-switching; aggregates = symbol sets; operators DuckDB-first.
-6. **Three competing PMs on the same feed — where disagreements live.** [P3, P4] Same bars, three verdicts. Separation of capital + differentiated strategies; per-PM watchlists; disagreement as a signal.
-7. **The defined-risk options floor — why the chart viewer enforces it too.** [P3, P4] Even the chart viewer refuses naked legs. Cross-project rule; UI never offers a leg the runtime would refuse.
-8. **Alpaca IEX live + yfinance / Stooq — data sourcing tradeoffs.** [P4] The bar you saw vs. the bar you traded on. Live IEX vs. consolidated tape; backfill sources; reconciliation at the canonical schema.
-9. **GICS as the only acceptable "sector" referent.** [P3, P4] "Tech" is not a sector — `Information Technology` is. 11 canonical names; shared parquet, thin readers per project.
-10. **What an indicator is, formally — turning TA into testable predicates.** [P1, P4] "RSI > 70" as a Prop with a witness. Predicate libraries promote indicators from cosmetic to provable; the bridge from analyzing to accounting.
+1. **The TA Bestiary — 117 Indicators, Mostly Redundant** [P4] Scrolling the catalog with a counter that ends at 117. The indicator-inflation problem; equivalence classes hidden in plain sight. · Short: "117 Indicators, Mostly the Same"
+2. **TA-Lib as Ground Truth — the MACD EMA-Realignment Quirk** [P4] A "wrong" MACD that's actually right. TA-Lib realigns both EMAs to slow-1; naive subtraction misses by one bar; parity is non-negotiable. · Short: "The MACD Alignment Quirk"
+3. **DuckDB and Parquet — Why Columnar Beats Row-Store for Bars** [P4, P5] "10 years of bars in 30 ms." Column-oriented IO, predicate pushdown, single-file portability.
+4. **Lightweight-Charts v5 — 10 Years of Bars at 60fps** [P4] The chart that doesn't blink at zoom-out. Pinned via npm at `5.2.0`; canvas-only rendering; v5 shape.
+5. **Aggregators — Small-Multiples, Heatmaps, Three.js Surfaces** [P4] From one symbol to a sector. Tab-switching; aggregates = symbol sets; operators DuckDB-first.
+6. **Three PMs on One Feed — Where the Disagreements Live** [P3, P4] Same bars, three verdicts. Separation of capital + differentiated strategies; per-PM watchlists; disagreement as a signal.
+7. **Even the Chart Viewer Refuses Naked Legs — the Options Floor** [P3, P4] Even the chart viewer refuses naked legs. Cross-project rule; UI never offers a leg the runtime would refuse.
+8. **The Bar You Saw vs. the Bar You Traded On — Data Sourcing** [P4] The bar you saw vs. the bar you traded on. Live IEX vs. consolidated tape; backfill sources; reconciliation at the canonical schema.
+9. **"Tech" Is Not a Sector — GICS as the Only Referent** [P3, P4] "Tech" is not a sector — `Information Technology` is. 11 canonical names; shared parquet, thin readers per project.
+10. **What an Indicator Is, Formally — TA as Testable Predicates** [P1, P4] "RSI > 70" as a Prop with a witness. Predicate libraries promote indicators from cosmetic to provable; the bridge from analyzing to accounting.
 
 ---
 
@@ -419,16 +457,16 @@ fails a real production take. So far it hasn't.
 
 *Profile mix: **P5** dominant, all others as illustrations.*
 
-1. **Two teammates, one repo — what the practice looks like.** [P5] Sole developer + expert AI assistant; narrow team, wide repo, explicit `CLAUDE.md` contracts at every boundary.
-2. **The monorepo tour — twelve subprojects, one venv, one workspace.** [P5] Sixty seconds, every subproject. Cytoscape repo map; edges are shared-data hubs.
-3. **Claude Code as the third teammate — agents you can fire.** [P5] A sub-agent that did one job and vanished. Per-task agents; when to spawn vs. inline; `CLAUDE.md` as the contract.
-4. **`CLAUDE.md` — writing instructions for the colleague who never reads twice.** [P5] A short, harsh `CLAUDE.md` beats a long polite one. Rules over preferences; pointers over prose; the trim discipline.
-5. **memsearch — how the assistant remembers what was said last Tuesday.** [P5] Cross-session recall. ONNX `bge-m3`, per-subproject collection scope, fork-isolated recall.
-6. **The 5×10 video plan — made by Claude, for Claude to make.** [P5] Outlining as a structured-output task; the design hand-off; the brand-sync constraint; the very plan you're watching being executed.
-7. **Verifying + Evaluating — shipping two products from one kernel.** [P1, P5] Two SSE servers, two Astro islands, one type-checked Lean. How product variation lives above a shared kernel without copy-paste.
-8. **The legal arc — from pro-se filings to a verifier product.** [P2, P5] A 2025 Family-Court motion that became an axiom set in 2026. Dogfooding across Family Court → 1st Cir. → Qnarre.
-9. **The financial arc — from analyzing TA to evaluating portfolios.** [P3, P5] An indicator becoming a predicate becoming a portfolio verdict. Data hub → analyzer → evaluator; each layer narrower.
-10. **What Quantapix is betting on — kernels under everything.** [P1, P5] The thesis in one card. An LLM is fast and frequently right; a kernel is slow and rarely wrong; both, audited together, change which industries can adopt this.
+1. **Two Teammates, One Repo — What the Practice Looks Like** [P5] Sole developer + expert AI assistant; narrow team, wide repo, explicit `CLAUDE.md` contracts at every boundary. · Short: "Two People, One Repo"
+2. **The Monorepo Tour — Subprojects, One Venv, One Workspace** [P5] Sixty seconds, every subproject. Cytoscape repo map; edges are shared-data hubs. · Short: "The Monorepo in 60 Seconds"
+3. **Claude Code as the Third Teammate — Agents You Can Fire** [P5] A sub-agent that did one job and vanished. Per-task agents; when to spawn vs. inline; `CLAUDE.md` as the contract.
+4. **CLAUDE.md — Instructions for the Colleague Who Never Reads Twice** [P5] A short, harsh `CLAUDE.md` beats a long polite one. Rules over preferences; pointers over prose; the trim discipline.
+5. **memsearch — Remembering What Was Said Last Tuesday** [P5] Cross-session recall. ONNX `bge-m3`, per-subproject collection scope, fork-isolated recall.
+6. **The 5×10 Plan — Made by Claude, for Claude to Make** [P5] Outlining as a structured-output task; the design hand-off; the brand-sync constraint; the very plan you're watching being executed.
+7. **Two Products From One Kernel — Qnarre and Qresev** [P1, P5] Two SSE servers, two Astro islands, one type-checked Lean. How product variation lives above a shared kernel without copy-paste.
+8. **The Legal Arc — From Pro-Se Filings to a Verifier Product** [P2, P5] A 2025 Family-Court motion that became an axiom set in 2026. Dogfooding across Family Court → 1st Cir. → Qnarre.
+9. **The Financial Arc — From Analyzing TA to Evaluating Portfolios** [P3, P5] An indicator becoming a predicate becoming a portfolio verdict. Data hub → analyzer → evaluator; each layer narrower.
+10. **What Quantapix Is Betting On — Kernels Under Everything** [P1, P5] The thesis in one card. An LLM is fast and frequently right; a kernel is slow and rarely wrong; both, audited together, change which industries can adopt this. · Short: "Kernels Under Everything"
 
 ---
 
