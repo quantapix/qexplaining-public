@@ -1,6 +1,6 @@
 # qexplaining-public — status
 
-_Snapshot: 2026-06-12. Refreshed weekly (Fridays) during the
+_Snapshot: 2026-06-26. Refreshed weekly (Fridays) during the
 2026-06-01 → 2026-12-01 drive window._
 
 Release-narrative status of the 50-video explainer arc (5 topics × 10
@@ -10,13 +10,13 @@ consolidated current snapshot.
 
 ## Overall
 
-**Live.** The channel's first two episodes are public — 1.1 "The
-hallucination tax" (2026-06-09) and 1.5 "Negative verification"
-(2026-06-11) — on YouTube (<https://www.youtube.com/@Quantapix>) and the
-channel CDN. The full roster, live and upcoming, renders at
-<https://quantapix.com/videos>. The master plan (all 50 subjects,
-profile-area tagged, in shootable order) is locked; the per-episode
-production pipeline is operational and has now reproduced the first four
+**Live.** Four episodes are public — 1.1 "The hallucination tax"
+(2026-06-09), 1.5 "Negative verification" (2026-06-11), 1.7 "Civil RICO,
+End to End", and 2.1 "When a docket and its record disagree" — on YouTube
+(<https://www.youtube.com/@Quantapix>) and the channel CDN. The full roster,
+live and upcoming, renders at <https://quantapix.com/videos>. The master plan
+(all 50 subjects, profile-area tagged, in shootable order) is locked; the
+per-episode production pipeline is operational and has reproduced the first four
 episodes end-to-end from scratch.
 
 ## Pipeline
@@ -44,6 +44,23 @@ episodes end-to-end from scratch.
 
 ## What landed recently
 
+- **First Topic-4 episode reached a finished master** — 4.2 "The MACD
+  Alignment Quirk" completed its full finishing pass to a normalized master
+  (per-beat takes, B-roll cohort, phrase-anchored markers, normalized
+  loudness). It is the first episode outside the Topic-1/Topic-2 production
+  block to bake end-to-end, and is queued for the upload step (not yet public).
+- **Silence-handle preflight gate** — per-beat takes carry short muted speech
+  handles so adjacent clips overlap cleanly through wipe transitions; a take
+  that arrives without them is now rejected at pre-flight rather than caught
+  as a silent-talking artifact downstream.
+- **Shared rendering surface** — the B-roll and composition lanes now draw
+  their brand tokens (palette, type, easing) from the constellation's shared
+  rendering engine, so the explainer arc and the product sites can't drift on
+  brand.
+- **Launch-cohort shorts finished** — each of the four live episodes now has
+  its own dedicated vertical short (a self-contained hook-and-payoff cut, not a
+  mechanical re-slice of the long form), finished through the off-editor
+  decoration and outro lane and entering the upload step.
 - **Two episodes shipped public** — 1.1 (2026-06-09) and 1.5 (2026-06-11),
   each with a YouTube leg and an immutable CDN cut, recomputed chapters,
   a branded outro plate, and a normalized master.
@@ -62,9 +79,10 @@ episodes end-to-end from scratch.
 
 ## Next
 
-- Finish 1.7 (Civil RICO walkthrough) and 2.1 through the same pipeline;
-  both already carry the wipe layout and segmented caption bake.
-- Shorts pickup lane for the live episodes.
+- Publish 4.2 ("The MACD Alignment Quirk") and the launch-cohort shorts
+  through the channel's upload path.
+- The next block of Topic-1, Topic-2, and Topic-4 episodes through the same
+  pipeline.
 
 ## How to verify
 

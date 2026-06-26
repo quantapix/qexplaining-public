@@ -1,7 +1,7 @@
 # qexplaining-public
 
 > 50 videos = 5 topics × 10 subjects each. 10–15 min per video,
-> narrated by **Janet** over animated cards/text + D3.js / Cytoscape.js
+> AI-narrated over animated cards/text + D3.js / Cytoscape.js
 > graphics. Brand-synced with the two product sites and the two
 > product app shells.
 
@@ -24,12 +24,45 @@ Every subject below carries one or two of these tags. Order within a
 topic is **shootable order** — earlier subjects motivate later ones.
 
 - **P1** — rigorous proofs for LLM "reasoning"
-- **P2** — legal applications (Family Court → 1st Cir. → Qnarre)
+- **P2** — legal applications (axiomatizing complaints for Qnarre)
 - **P3** — financial applications (analyzing + accounting → Qresev)
 - **P4** — grounding competing technical-analysis approaches
 - **P5** — agentic software development (Claude Code + monorepo)
 
 ---
+
+## Status — 2026-06-26
+
+No new episode went public this week; the four live episodes (1.1, 1.5, 1.7,
+2.1) hold on YouTube and the channel CDN. The full roster, live and upcoming,
+renders at <https://quantapix.com/videos>.
+
+Landed since the last entry:
+
+- **The first Topic-4 episode reached a finished master.** Episode 4.2 — "The
+  MACD Alignment Quirk" — completed its full finishing pass to a normalized
+  master: per-beat takes generated, B-roll cohort rendered, markers re-anchored
+  to the actual narration phrase boundaries, loudness normalized. It is the
+  first episode outside the Topic-1/Topic-2 production block to bake end-to-end,
+  and it is queued for the upload step (not yet public).
+- **Silence-handle preflight gate.** Per-beat takes carry short muted speech
+  handles so adjacent clips overlap cleanly through wipe transitions. A take
+  that arrives without them is now rejected at pre-flight rather than caught as
+  a silent-talking artifact downstream — a production-readiness check, not a
+  post-render fix.
+- **Shared rendering surface.** The B-roll and composition lanes now draw their
+  brand tokens (palette, type, easing) from the constellation's shared rendering
+  engine, so the explainer arc and the product sites can't drift on brand.
+- **Launch-cohort shorts finished.** Each of the four live episodes now has its
+  own dedicated vertical short — a self-contained hook-and-payoff cut, not a
+  mechanical re-slice of the long form — finished through the off-editor
+  decoration and outro lane and entering the upload step.
+
+What's coming up:
+
+- Publish 4.2 and the launch-cohort shorts through the channel's upload path.
+- The next block of Topic-1, Topic-2, and Topic-4 episodes through the same
+  pipeline.
 
 ## Status — 2026-06-19
 
@@ -464,7 +497,7 @@ fails a real production take. So far it hasn't.
 5. **memsearch — Remembering What Was Said Last Tuesday** [P5] Cross-session recall. ONNX `bge-m3`, per-subproject collection scope, fork-isolated recall.
 6. **The 5×10 Plan — Made by Claude, for Claude to Make** [P5] Outlining as a structured-output task; the design hand-off; the brand-sync constraint; the very plan you're watching being executed.
 7. **Two Products From One Kernel — Qnarre and Qresev** [P1, P5] Two SSE servers, two Astro islands, one type-checked Lean. How product variation lives above a shared kernel without copy-paste.
-8. **The Legal Arc — From Pro-Se Filings to a Verifier Product** [P2, P5] A 2025 Family-Court motion that became an axiom set in 2026. Dogfooding across Family Court → 1st Cir. → Qnarre.
+8. **The Legal Arc — How a Complaint Becomes an Axiom Set** [P2, P5] How a legal complaint is read into predicates and axioms, and how the kernel composes a verdict from them. Worked on synthetic complaint fixtures — the method, not any party's live case.
 9. **The Financial Arc — From Analyzing TA to Evaluating Portfolios** [P3, P5] An indicator becoming a predicate becoming a portfolio verdict. Data hub → analyzer → evaluator; each layer narrower.
 10. **What Quantapix Is Betting On — Kernels Under Everything** [P1, P5] The thesis in one card. An LLM is fast and frequently right; a kernel is slow and rarely wrong; both, audited together, change which industries can adopt this. · Short: "Kernels Under Everything"
 
