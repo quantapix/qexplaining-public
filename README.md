@@ -15,7 +15,7 @@ the master plan and the scripts as they land.
 - Engineering output: <https://quantapix.com>
 - Motivational record: <https://femfas.net>
 - **Watch: <https://www.youtube.com/@Quantapix>** — the channel where this
-  arc publishes; the first four episodes are live (June 2026), with the full
+  arc publishes; six episodes are live (June–July 2026), with the full
   roster at <https://quantapix.com/videos>.
 
 ## Profile-area tags
@@ -30,6 +30,53 @@ topic is **shootable order** — earlier subjects motivate later ones.
 - **P5** — agentic software development (Claude Code + monorepo)
 
 ---
+
+## Status — 2026-07-03
+
+Two more episodes went public this week — both from Topic 4 (technical
+analysis). Six episodes are now live on YouTube and the channel CDN, up from
+four. The full 50-video roster, live and upcoming, renders at
+<https://quantapix.com/videos>.
+
+Landed since the last entry:
+
+- **Episode 4.2 — "TA-Lib as Ground Truth: the MACD Alignment Quirk" — is
+  public.** A "wrong" MACD that is actually right: the reference library
+  realigns both moving averages to the slow period minus one bar, so a naive
+  subtraction is off by a single bar; parity with the reference is
+  non-negotiable. It is the first Topic-4 episode to reach the channel. Watch:
+  <https://www.youtube.com/watch?v=suIFSrd3pHI> or the CDN cut at
+  <https://videos.quantapix.com/T4/01-talib-macd-quirk.mp4>.
+- **Episode 4.1 — "The TA Bestiary: 117 Indicators, Mostly Redundant" — is
+  public.** Scrolling the indicator catalog to a counter that ends at 117 — the
+  indicator-inflation problem, and the equivalence classes hidden in plain
+  sight. Watch: <https://www.youtube.com/watch?v=wugQWlHa-Ag> or
+  <https://videos.quantapix.com/T4/02-ta-bestiary.mp4>.
+- **A third script cohort landed — ten more subjects.** Full narration scripts
+  plus per-video design bundles are now written for ten more subjects across
+  every topic: what semantic search can and can't do, the Lean4 kernel as a
+  proof-correctness oracle, the predicate bridge between the model and the
+  kernel, a narrative-as-structure formalization, live proof-event streaming,
+  the six-strategy defined-risk allow-list, the five evaluation frameworks,
+  columnar bar storage, the two-teammate practice, and the monorepo tour. These
+  are scripts and graphic specs; rendering happens downstream.
+- **Financial-evaluation disclosure baked onto the frame.** Any rasterized card
+  that carries a financial evaluation or report now bakes the full "an
+  evaluation, not investment advice or a recommendation — do your own due
+  diligence" footer directly into the image, not only into the narration, so
+  the disclosure travels with the frame wherever it is reused.
+- **Channel-wide finishing polish.** Every episode now opens on its own 16:9
+  thumbnail as a roughly half-second branded flash that hard-cuts into an
+  already-established cold open — no fade-up, and no black frame at the head.
+  The branded end screen carries the Quantapix mark and wordmark in the brand
+  display typeface, and a shared font loader guarantees the real brand faces
+  render on every card rather than a system fallback.
+
+What's coming up:
+
+- The next Topic-1, Topic-2, and Topic-3 episodes from the new script cohort,
+  through the same production pipeline.
+- Vertical shorts for the live episodes.
 
 ## Status — 2026-06-26
 
