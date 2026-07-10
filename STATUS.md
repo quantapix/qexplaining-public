@@ -1,6 +1,6 @@
 # qexplaining-public — status
 
-_Snapshot: 2026-06-26. Refreshed weekly (Fridays) during the
+_Snapshot: 2026-07-10. Refreshed weekly (Fridays) during the
 2026-06-01 → 2026-12-01 drive window._
 
 Release-narrative status of the 50-video explainer arc (5 topics × 10
@@ -57,7 +57,7 @@ episodes end-to-end from scratch.
   their brand tokens (palette, type, easing) from the constellation's shared
   rendering engine, so the explainer arc and the product sites can't drift on
   brand.
-- **Launch-cohort shorts finished** — each of the four live episodes now has
+- **Launch-cohort shorts finished** — each of the four launch-cohort episodes now has
   its own dedicated vertical short (a self-contained hook-and-payoff cut, not a
   mechanical re-slice of the long form), finished through the off-editor
   decoration and outro lane and entering the upload step.

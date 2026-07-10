@@ -15,7 +15,7 @@ the master plan and the scripts as they land.
 - Engineering output: <https://quantapix.com>
 - Motivational record: <https://femfas.net>
 - **Watch: <https://www.youtube.com/@Quantapix>** — the channel where this
-  arc publishes; six episodes are live (June–July 2026), with the full
+  arc publishes; seven episodes are live (June–July 2026), with the full
   roster at <https://quantapix.com/videos>.
 
 ## Profile-area tags
@@ -33,10 +33,10 @@ topic is **shootable order** — earlier subjects motivate later ones.
 
 ## Status — 2026-07-03
 
-Two more episodes went public this week — both from Topic 4 (technical
-analysis). Six episodes are now live on YouTube and the channel CDN, up from
-four. The full 50-video roster, live and upcoming, renders at
-<https://quantapix.com/videos>.
+Seven episodes are now live on YouTube and the channel CDN, spanning four of
+the five topics — three from Topic 1, one each from Topics 2 and 3, and two
+from Topic 4 (technical analysis). The full 50-video roster, live and
+upcoming, renders at <https://quantapix.com/videos>.
 
 Landed since the last entry:
 
