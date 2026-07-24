@@ -15,8 +15,12 @@ the master plan and the scripts as they land.
 - Engineering output: <https://quantapix.com>
 - Motivational record: <https://femfas.net>
 - **Watch: <https://www.youtube.com/@Quantapix>** — the channel where this
-  arc publishes; seven episodes are live (June–July 2026), with the full
+  arc publishes; eight episodes are live (June–July 2026), with the full
   roster at <https://quantapix.com/videos>.
+
+**Every episode is AI-narrated.** The presenter is a synthesized avatar over a
+synthesized voice — not a recording of a person — and each upload carries the
+platform's altered-content disclosure.
 
 ## Profile-area tags
 
@@ -30,6 +34,71 @@ topic is **shootable order** — earlier subjects motivate later ones.
 - **P5** — agentic software development (Claude Code + monorepo)
 
 ---
+
+## Status — 2026-07-24
+
+Eight episodes are now live on YouTube and the channel CDN, spanning four of the
+five topics — four from Topic 1, one each from Topics 2 and 3, and two from Topic
+4. The full 50-video roster, live and upcoming, renders at
+<https://quantapix.com/videos>.
+
+Landed since the last entry:
+
+- **Episode 1.2 — "What Semantic Search Actually Does — and What It Can't" — is
+  public.** Cosine similarity demonstrated as a trick that isn't magic:
+  embeddings cluster, they do not derive. The episode puts an embedding
+  neighbourhood and an axiomatic derivation tree side by side and shows what each
+  one can and cannot answer. Watch:
+  <https://www.youtube.com/watch?v=_4hKJPsb5Jw> or the CDN cut at
+  <https://videos.quantapix.com/T1/02-semantic-search-limits.mp4>.
+- **B-roll-first production gate.** Once a script clears, the next production
+  step is the supporting graphics, not the narration: the full component set is
+  authored and assembled into a silent preview, and no narration take fires until
+  that preview is reviewed as complete and coherent. Narration is the expensive,
+  re-shoot-hostile leg; graphics are the cheap one to iterate. 1.2 is the first
+  episode built under this gate.
+- **The silent preview is presenter-blind — a production lesson from 1.2.** The
+  preview composites no presenter picture-in-picture and no caption band, so a
+  graphic whose payoff sits underneath either is *structurally invisible* at the
+  review gate. 1.2 passed review on a preview whose derivation-tree half in fact
+  sat entirely behind the presenter corner; it only surfaced once the takes were
+  shot and the cut assembled. The keep-out box is now drawn onto the preview
+  before the gate is lifted — the check the bundle's own design floor already
+  demanded.
+- **Caption-contrast floor, channel-wide.** Baked captions must contrast with
+  what is behind them. Ink is a per-episode decision derived from that episode's
+  own background base — light beds take dark ink with a light keyline, dark beds
+  keep light ink — and no episode inherits another cohort's caption constants.
+  Review now checks legibility over the lightest frame the captions cross.
+- **Timeline colour management, not just per-component colour.** Setting the
+  editor's colour-science mode alone left the timeline in a scene-linear space
+  that gamma-decoded every input and wrote it out without re-encoding, crushing
+  near-blacks — a petrol background measured at (14, 26, 30) rendered as
+  (0, 4, 5). It reads as "moody dark" rather than broken, so it survives
+  eyeballing; only the automated black-frame check catches it. Timeline and
+  output colour spaces are now pinned explicitly. The fix is never to lighten the
+  bed — check the render's actual ground pixel against the intended background
+  first.
+- **App-UI episodes held pending the refreshed product shell.** Any episode whose
+  graphics depict the product app interfaces holds final production — component
+  re-render, narration takes, composition, publish — until the refreshed shell
+  ships, and then re-skins those components against the real interface rather
+  than a simulated guess of it. Non-UI supporting material for held episodes
+  continues under the B-roll-first gate.
+- **Release records reconciled across the published set.** Every published
+  episode now carries its release date and immutable CDN key in its own episode
+  record, so the master plan, the public roster page, and the channel agree
+  without a manual cross-check.
+- **Arc progress renders as a dashboard.** The 50-row arc matrix on the public
+  status page became a dashboard: a four-card progress strip — scripted,
+  designed, recorded, rendered — plus per-topic filter chips over the same rows.
+  A presentation re-shape; every number was already published.
+
+What's coming up:
+
+- The launch-cohort vertical shorts through the channel's upload path.
+- The held app-UI episodes, resumed once the refreshed shell ships.
+- The next Topic-1, Topic-2, and Topic-3 episodes from the current script cohort.
 
 ## Status — 2026-07-03
 
@@ -333,15 +402,17 @@ layered-scaffolding pipeline.
 - **All three earlier production episodes migrated** (1.1 + 1.5 +
   2.1). Same 7-phase shape across the channel; per-episode
   `PRODUCTION.md` runsheets are the operator's source of truth.
-- **Real-Janet 3-avatar production set** locked since 2026-05-11.
-  Three HeyGen Photo Avatars trained from real-Janet source stills,
+- **Three-avatar presenter set** locked since 2026-05-11. Three
+  synthesized photo-avatars over one locked synthesized voice (2026-05-07),
   rotated per beat-archetype: priority 1 hand-down (channel default;
   declarative narration spine), priority 2 hand-up (contemplative
   beats), priority 3 head + shoulders (PIP / lower-third / B-roll
-  cutaway). Voice unchanged: Janet-2 Design-a-Voice (locked
-  2026-05-07). Pose rotation is per-episode creative texture, not
-  identity drift — any change to the three pinned avatar IDs is a
-  channel-rebrand event.
+  cutaway). The presenter is generated, not a recording of a person —
+  earlier copy here described the avatars as trained from a real
+  person's source stills, which was wrong and is corrected in place.
+  Pose rotation is per-episode creative texture, not identity drift —
+  any change to the three pinned avatar identities is a channel-rebrand
+  event.
 - **1.0 channel-preview** upgrades to the full 7-phase shape this
   week. Today it carries a preview-light single-take A-roll path; the
   upgrade brings it under the same operator runsheet as 1.1+, so the
@@ -433,7 +504,7 @@ What's coming up:
 - **A-roll (voice + face).** HeyGen Photo Avatar V against a single
   locked still. Voice generated via HeyGen's Design-a-Voice (channel
   voice locked retroactively to the production preview at
-  <https://quantapix.com/videos/Janet-preview.mp4>). Per-beat
+  <https://videos.quantapix.com/janet-preview.mp4>). Per-beat
   generation — one MP4 + sidecar SRT per script beat per aspect —
   rather than monolithic takes; cheaper re-cuts, tighter lipsync.
 - **B-roll (cards + graphics + animations).** Remotion: React-based
@@ -601,13 +672,13 @@ the per-episode marker CSVs from the actual take SRTs). The
 earlier monolithic `assemble.py` driver is retired channel-wide
 as of 2026-05-19.
 
-Five episodes carry the full set this sprint week:
-1.0, 1.1, 1.5, 2.1, 1.7. Channel pilot 1.0 upgrades from the
-preview-light shape to the same 7-phase pipeline as 1.1+.
+Every published episode carries the full set. Channel pilot 1.0 was upgraded
+from the preview-light shape to the same phase pipeline as the rest.
 
 ## Contact
 
-[`quantapix@gmail.com`](mailto:quantapix@gmail.com)
+[github.com/quantapix](https://github.com/quantapix) — open an issue on any repo
+in the org. Answered in public; there is no contact email.
 
 ## License
 
