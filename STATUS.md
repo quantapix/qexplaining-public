@@ -1,6 +1,6 @@
 # qexplaining-public — status
 
-_Snapshot: 2026-07-24. Refreshed weekly (Fridays) during the
+_Snapshot: 2026-07-31. Refreshed weekly (Fridays) during the
 2026-06-01 → 2026-12-01 drive window._
 
 Release status of the 50-video explainer arc (5 topics × 10 subjects).
@@ -34,6 +34,11 @@ profile-area tagged, in shootable order — is locked; the per-episode productio
 pipeline is operational and has reproduced every live episode end-to-end from
 scratch.
 
+The live table above is the authoritative count. The progress counters on the
+public status page derive "rendered" from finished cuts on disk rather than from
+the tracked release records, so that one figure varies with which workstation
+took the snapshot; it is being re-derived from the release records.
+
 No vertical shorts are public yet. The launch-cohort shorts are cut and
 finished; they are held at the upload step behind an ending/outro decision.
 
@@ -60,6 +65,9 @@ finished; they are held at the upload step behind an ending/outro decision.
 
 ## What landed recently
 
+- **No new episode this week.** The live set holds at eight; the week's work was
+  contract maintenance and a correction to how the public progress counters are
+  derived (above).
 - **Episode 1.2 is public** (2026-07-12) — "What Semantic Search Actually Does —
   and What It Can't", the eighth live episode and the first to be built under the
   B-roll-first gate below.

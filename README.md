@@ -35,6 +35,39 @@ topic is **shootable order** — earlier subjects motivate later ones.
 
 ---
 
+## Status — 2026-07-31
+
+No new episode went public this week. The eight live episodes hold on YouTube
+and the channel CDN; the most recent is the semantic-search episode, public
+since mid-July. The full roster, live and upcoming, renders at
+<https://quantapix.com/videos>.
+
+Landed since the last entry:
+
+- **The arc-progress counters are host-dependent — a correction.** The progress
+  strip introduced in the last entry derives its "rendered" count by looking for
+  finished cuts on disk, and finished cuts are build outputs rather than tracked
+  files. So the count reads 10 of 50 when the snapshot is taken on the machine
+  that rendered them and 8 of 50 anywhere else, and it has alternated between
+  the two across successive publishes. Nothing about production changed: both
+  episodes involved have been public since early July. The counter will be
+  re-derived from the tracked per-episode release records — the same records the
+  roster page and the channel already agree on — instead of from build outputs.
+  Until that lands, the live-episode table in [`STATUS.md`](./STATUS.md) is the
+  count to trust.
+- **A maintenance week on the channel's own contracts.** The written instruction
+  file that governs the arc was condensed and re-pointed rather than extended —
+  the production rules it carries (graphics before narration, the keep-out check
+  on the silent preview, per-episode caption contrast, pinned timeline colour
+  spaces, the hold on episodes that depict the product interfaces) are unchanged
+  and were described in the previous entries.
+
+What's coming up:
+
+- The launch-cohort vertical shorts through the channel's upload path.
+- The held app-UI episodes, resumed once the refreshed shell ships.
+- The next Topic-1, Topic-2, and Topic-3 episodes from the current script cohort.
+
 ## Status — 2026-07-24
 
 Eight episodes are now live on YouTube and the channel CDN, spanning four of the
@@ -674,6 +707,8 @@ as of 2026-05-19.
 
 Every published episode carries the full set. Channel pilot 1.0 was upgraded
 from the preview-light shape to the same phase pipeline as the rest.
+
+Authored by a sole developer working with an AI assistant (Claude Code) under written CLAUDE.md contracts — methodology in [qagents-public](https://github.com/quantapix/qagents-public).
 
 ## Contact
 
