@@ -9,7 +9,8 @@ A weekly-refreshed window into the explainer arc that runs alongside
 the private working repository. The output of the work is **scripts**
 (plus the data behind every graphic); rendering happens in Claude
 Design; voice + lipsync in a separate pipeline. This repo publishes
-the master plan and the scripts as they land.
+the master plan and the weekly release status; the narration scripts
+and production files stay in the private working tree.
 
 - Parent organisation: <https://github.com/quantapix>
 - Engineering output: <https://quantapix.com>
@@ -34,6 +35,49 @@ topic is **shootable order** — earlier subjects motivate later ones.
 - **P5** — agentic software development (Claude Code + monorepo)
 
 ---
+
+## Status — 2026-08-07
+
+No new episode went public this week; the eight live episodes hold on YouTube
+and the channel CDN, the most recent being the semantic-search episode, public
+since mid-July. The full roster, live and upcoming, renders at
+<https://quantapix.com/videos>.
+
+The week's work was a correctness pass over this repo's own claims, not
+production. Three of them were wrong, and all three were found by the sweep
+rather than by a reader.
+
+- **The vertical shorts are uploaded, not awaiting upload — a correction.**
+  Previous entries here described the four launch-cohort shorts as finished and
+  "held at the upload step". That has not been true since late June: all four
+  were uploaded then and have been sitting unlisted on the channel ever since.
+  None is public, so the live count is unaffected — but what holds them is the
+  public flip, pending a decision on the shorts' ending, and not the upload.
+  The earlier wording survived four weekly refreshes because nothing
+  cross-checked this page's prose against the channel's own release records.
+  That check now runs as part of the refresh.
+- **The presenter description is corrected in one more place.** An earlier entry
+  already retracted the claim that the avatars were trained from a real person's
+  stills; the consolidated snapshot still carried the retracted word. The
+  presenter set is generated, and the voice is synthesized. Neither is derived
+  from a recording of a person, and every upload carries the platform's
+  altered-content disclosure.
+- **What this repo publishes is now stated accurately.** The page described a
+  seven-file per-episode deliverable set as though those files were browsable
+  here. They are not: this repo publishes the master plan and the release status,
+  and the per-episode narration and production files live in the private working
+  tree. The seven-file shape is still described — as the private working shape it
+  is, rather than as a directory listing of this repo.
+
+Also this week: 19 of the 50 subjects now carry a full narration script, seven
+of those also a short script. Both figures are plan progress; per-episode
+release state is on the roster page.
+
+What's coming up:
+
+- The public flip for the launch-cohort shorts, once the ending decision lands.
+- The held app-UI episodes, resumed once the refreshed shell ships.
+- The next Topic-1, Topic-2, and Topic-3 episodes from the current script cohort.
 
 ## Status — 2026-07-31
 
@@ -430,8 +474,8 @@ layered-scaffolding pipeline.
   runsheet — pre-flight, assembly, captioning, decoration, scoring,
   mastering, review render, cut review, final render, shorts pickup,
   rescue, upload. Each phase ends in an explicit playback gate;
-  later phases never silently override earlier decisions. Spec at
-  `data/specs/production-phasing-2026-05-19/SPEC.md`.
+  later phases never silently override earlier decisions. The
+  production-phasing spec is the contract.
 - **All three earlier production episodes migrated** (1.1 + 1.5 +
   2.1). Same 7-phase shape across the channel; per-episode
   `PRODUCTION.md` runsheets are the operator's source of truth.
@@ -485,7 +529,7 @@ What landed this week:
   channel-locked 1920×1080 / 30 fps. Each composition's internal
   cue frames (line type-in, recolor, glow ramp, layout crossfade,
   zoom transition, etc.) re-anchored to the production-locked
-  marker CSVs — the SRT word boundaries from the actual Janet
+  marker CSVs — the SRT word boundaries from the actual narration
   takes, not the script's narrative estimates.
 - **9:16-only HeyGen rule** (locked 2026-05-10) confirmed across
   all three production episodes. HeyGen ships portrait; Resolve
@@ -551,7 +595,7 @@ What's coming up:
   ones (now a per-phase pipeline). The wrapper handles import, two-aspect timeline
   setup, A-roll comping with breath gaps, B-roll cue placement at
   marker frames, and back-to-back YouTube-master + Shorts render.
-  Fusion node-tree authoring (Janet PIP corner ring + soft shadow,
+  Fusion node-tree authoring (presenter PIP corner ring + soft shadow,
   Shorts inset band, per-cue compositing) is manual at v1, guided
   by per-skill node-tree force-graph diagrams.
 - **Captions + loudness.** Resolve native subtitle generation from
@@ -562,7 +606,7 @@ What's coming up:
   required filter, monetization-safe); per-topic register pivot
   (T1 ambient electronic / T2 string-pad / etc.). SFX library
   selected per cue, kept sparing — no whooshes, no risers under
-  Janet.
+  the narration.
 
 ElevenLabs is deferred — only revisited if HeyGen's voice quality
 fails a real production take. So far it hasn't.
@@ -673,10 +717,10 @@ Refreshed weekly from the private working tree. Outline edits, new
 profile-area tags, and finalised scripts are committed as ordinary
 diffs — the commit log is the change record.
 
-Per-video deliverables follow a seven-file shape under
-`scripts/<topic-slug>/<n.m>-<slug>/`:
+Per-video deliverables live in the private working tree, one directory
+per episode, in a seven-file shape:
 
-- `script.md` — Janet narration with timing, on-screen card cues,
+- `script.md` — narration with timing, on-screen card cues,
   graphic-spec slugs, pacing notes for the voice generator.
 - `design.md` — Claude Design prompts for the per-video B-roll
   bundle; tokens contract; cue-state spec for each Remotion
@@ -705,8 +749,11 @@ the per-episode marker CSVs from the actual take SRTs). The
 earlier monolithic `assemble.py` driver is retired channel-wide
 as of 2026-05-19.
 
-Every published episode carries the full set. Channel pilot 1.0 was upgraded
-from the preview-light shape to the same phase pipeline as the rest.
+Every published episode carries the full set; the channel pilot was upgraded
+from its preview-light shape to the same phase pipeline as the rest. What this
+repo publishes is the master plan above and the release status in
+[`STATUS.md`](./STATUS.md) — refreshed weekly as ordinary diffs, so the commit
+log is the change record.
 
 Authored by a sole developer working with an AI assistant (Claude Code) under written CLAUDE.md contracts — methodology in [qagents-public](https://github.com/quantapix/qagents-public).
 

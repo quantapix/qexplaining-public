@@ -1,6 +1,6 @@
 # qexplaining-public — status
 
-_Snapshot: 2026-07-31. Refreshed weekly (Fridays) during the
+_Snapshot: 2026-08-07. Refreshed weekly (Fridays) during the
 2026-06-01 → 2026-12-01 drive window._
 
 Release status of the 50-video explainer arc (5 topics × 10 subjects).
@@ -39,15 +39,18 @@ public status page derive "rendered" from finished cuts on disk rather than from
 the tracked release records, so that one figure varies with which workstation
 took the snapshot; it is being re-derived from the release records.
 
-No vertical shorts are public yet. The launch-cohort shorts are cut and
-finished; they are held at the upload step behind an ending/outro decision.
+No vertical shorts are public yet. The four launch-cohort shorts were cut,
+finished, and uploaded in late June; they have been held unlisted since, pending
+a decision on the shorts' ending. What holds them is the public flip, not the
+upload.
 
 ## Pipeline
 
-- **A-roll** — an AI presenter (a trained photo-avatar set, rotated per
-  beat-archetype) over a locked synthesized voice; per-beat generation (one clip
-  + caption track per script beat per aspect) for cheaper re-cuts and tighter
-  lipsync.
+- **A-roll** — a generated AI presenter (a set of synthesized photo-avatars,
+  rotated per beat-archetype) over a locked synthesized voice; per-beat
+  generation (one clip + caption track per script beat per aspect) for cheaper
+  re-cuts and tighter lipsync. The presenter is generated, not derived from a
+  recording of a person.
 - **B-roll** — programmatic, React-based components rendered to a high-quality
   intermediate, with brand tokens read from a generated module so no raw values
   leak into renders; plus a Geometry-Nodes background-plate lane for the
@@ -65,9 +68,10 @@ finished; they are held at the upload step behind an ending/outro decision.
 
 ## What landed recently
 
-- **No new episode this week.** The live set holds at eight; the week's work was
-  contract maintenance and a correction to how the public progress counters are
-  derived (above).
+- **No new episode this week.** The live set holds at eight. The week's work was
+  a correctness pass over this repo's own claims — the shorts' hold point, the
+  presenter description, and what this repo actually publishes — all three
+  corrected above and detailed in the README's rolling log.
 - **Episode 1.2 is public** (2026-07-12) — "What Semantic Search Actually Does —
   and What It Can't", the eighth live episode and the first to be built under the
   B-roll-first gate below.
@@ -114,5 +118,7 @@ finished; they are held at the upload step behind an ending/outro decision.
 - Watch the live episodes: the channel at
   <https://www.youtube.com/@Quantapix>, or the CDN cuts linked from
   <https://quantapix.com/videos>.
-- The master plan + every authored script lands in this repo as ordinary
-  diffs; the commit log is the change record.
+- The master plan above and the weekly release status are what this repo
+  publishes, refreshed as ordinary diffs — the commit log is the change record.
+  The narration scripts and per-episode production files stay in the private
+  working tree.
