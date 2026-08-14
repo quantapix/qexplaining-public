@@ -36,6 +36,54 @@ topic is **shootable order** — earlier subjects motivate later ones.
 
 ---
 
+## Status — 2026-08-14
+
+No new episode went public this week, and none entered production. The eight
+live episodes hold on YouTube and the channel CDN; the most recent is still the
+semantic-search episode, public since mid-July. The full roster, live and
+upcoming, renders at <https://quantapix.com/videos>.
+
+Plan progress is unchanged: 19 of the 50 subjects carry a full narration
+script, seven of those also a short script. Both figures were re-measured
+against the working tree for this entry rather than carried forward from the
+last one.
+
+The week's work was a correction to this page's own description of the
+per-episode working shape. It is the second half of a defect the last entry
+fixed only halfway.
+
+- **The seven-file per-episode shape is the launch cohort's, not the
+  channel's.** The last entry corrected where those files live — the private
+  working tree, not this repo. It left standing a second claim, that every
+  published episode carries the full set. Measured against the working tree,
+  five directories do: the channel preview and the four launch-cohort episodes.
+  The four episodes published after them carry three or four of the seven. The
+  three that are absent are the prose runsheets — the editor-project preset, the
+  per-episode compositing keyframe notes, and the twelve-phase operator
+  runsheet. Nothing was lost with them. Those three described by hand what the
+  per-phase Python drivers came to do directly, and they stopped being written
+  once the driver set stabilised. The production-readiness gate survives as its
+  own file in several later episodes; the narration script, the graphics-bundle
+  spec, and the per-beat take payloads are in all of them that have reached
+  authored takes. The shape is restated accurately below.
+- **The driver list was stale in two ways.** It omitted the captioning phase,
+  which has been in the set since the launch cohort, and it listed the shorts
+  phase alongside the long-form drivers when that one has always run out of the
+  short's own directory, off the editor entirely. Both corrected below.
+
+Neither correction changes anything about the published episodes: the same eight
+are live, built through the same pipeline, and the release records behind them
+are untouched. What changed is that the page now describes a shape that two
+cohorts of production actually left behind.
+
+What's coming up:
+
+- The public flip for the launch-cohort shorts, once the ending decision lands.
+- The held app-UI episodes, resumed once the refreshed shell ships.
+- The next Topic-1, Topic-2, and Topic-3 episodes from the current script cohort.
+
+---
+
 ## Status — 2026-08-07
 
 No new episode went public this week; the eight live episodes hold on YouTube
@@ -717,8 +765,12 @@ Refreshed weekly from the private working tree. Outline edits, new
 profile-area tags, and finalised scripts are committed as ordinary
 diffs — the commit log is the change record.
 
-Per-video deliverables live in the private working tree, one directory
-per episode, in a seven-file shape:
+Per-video deliverables live in the private working tree, one directory per
+episode. The shape changed once since the channel launched, so both are worth
+stating.
+
+The launch cohort — the channel preview and the first four episodes — carries a
+seven-file set:
 
 - `script.md` — narration with timing, on-screen card cues,
   graphic-spec slugs, pacing notes for the voice generator.
@@ -742,16 +794,25 @@ per episode, in a seven-file shape:
   `create_video_from_avatar` payload per script beat) plus
   per-take acceptance gate.
 
-Plus seven per-phase Python drivers
-(`phase{0,1,3,5,6,8,9}_*.py`) and a marker resolver
-(`retime_markers.py` — cue-key → SRT-phrase resolver that emits
-the per-episode marker CSVs from the actual take SRTs). The
-earlier monolithic `assemble.py` driver is retired channel-wide
-as of 2026-05-19.
+Episodes authored after that cohort carry `script.md` and `design.md`; those
+with an authored take payload add `heygen-aroll.md`, and several also carry
+`SHOOTING.md`. The other three files are retired rather than missing:
+`resolve.md`, `FUSION-NOTES.md` and `PRODUCTION.md` described by hand what the
+per-phase drivers do directly, and they stopped being written once that driver
+set stabilised.
 
-Every published episode carries the full set; the channel pilot was upgraded
-from its preview-light shape to the same phase pipeline as the rest. What this
-repo publishes is the master plan above and the release status in
+The long-form driver set is `phase{0,1,2,3,5,6,8}_*.py` — pre-flight, assembly,
+captioning, decoration (two drivers: the presenter-and-wipe pass, and the
+branded next-video outro), mastering, review render, final render — alongside
+`outro.json`, a shared layout module, and `retime_markers.py`, a cue-key →
+SRT-phrase resolver that emits the per-episode marker CSVs from the actual take
+SRTs. Shorts run `phase9_shorts.py` out of the short's own directory, off the
+editor entirely. The launch cohort additionally carries a second assembly and
+decoration lane for interactive Fusion delivery; the default lane is headless.
+The earlier monolithic `assemble.py` driver was retired channel-wide on
+2026-05-19.
+
+What this repo publishes is the master plan above and the release status in
 [`STATUS.md`](./STATUS.md) — refreshed weekly as ordinary diffs, so the commit
 log is the change record.
 

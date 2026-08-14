@@ -1,6 +1,6 @@
 # qexplaining-public — status
 
-_Snapshot: 2026-08-07. Refreshed weekly (Fridays) during the
+_Snapshot: 2026-08-14. Refreshed weekly (Fridays) during the
 2026-06-01 → 2026-12-01 drive window._
 
 Release status of the 50-video explainer arc (5 topics × 10 subjects).
@@ -68,10 +68,15 @@ upload.
 
 ## What landed recently
 
-- **No new episode this week.** The live set holds at eight. The week's work was
-  a correctness pass over this repo's own claims — the shorts' hold point, the
-  presenter description, and what this repo actually publishes — all three
-  corrected above and detailed in the README's rolling log.
+- **No new episode this week, and none in production.** The live set holds at
+  eight. The week's working-tree activity was contract and pointer maintenance,
+  not production. Every figure on this page was re-measured for this snapshot
+  rather than carried forward; all of them are unchanged.
+- **The per-episode working shape is corrected.** The seven-file shape this
+  repo has described is the launch cohort's; the four episodes published after
+  it carry three or four of those files, because three of the seven were prose
+  runsheets that the per-phase drivers superseded. No published episode is
+  affected. Detail in the README's rolling log.
 - **Episode 1.2 is public** (2026-07-12) — "What Semantic Search Actually Does —
   and What It Can't", the eighth live episode and the first to be built under the
   B-roll-first gate below.
