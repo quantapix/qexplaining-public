@@ -7,10 +7,12 @@
 
 A weekly-refreshed window into the explainer arc that runs alongside
 the private working repository. The output of the work is **scripts**
-(plus the data behind every graphic); rendering happens in Claude
-Design; voice + lipsync in a separate pipeline. This repo publishes
-the master plan and the weekly release status; the narration scripts
-and production files stay in the private working tree.
+(plus the data behind every graphic); the per-video design bundle is
+authored in Claude Design, the B-roll is rendered with Remotion, the
+presenter and voice are generated with HeyGen, and composition and
+finishing run in DaVinci Resolve Studio. This repo publishes the
+master plan and the weekly release status; the narration scripts and
+production files stay in the private working tree.
 
 - Parent organisation: <https://github.com/quantapix>
 - Engineering output: <https://quantapix.com>
@@ -33,6 +35,61 @@ topic is **shootable order** — earlier subjects motivate later ones.
 - **P3** — financial applications (analyzing + accounting → Qresev)
 - **P4** — grounding competing technical-analysis approaches
 - **P5** — agentic software development (Claude Code + monorepo)
+
+---
+
+## Status — 2026-08-21
+
+No new episode went public this week, and none entered production. The eight
+live episodes hold on YouTube and the channel CDN; the most recent is still the
+semantic-search episode, public since mid-July. The full roster, live and
+upcoming, renders at <https://quantapix.com/videos>.
+
+Plan progress is unchanged: 19 of the 50 subjects carry a full narration script,
+seven of those also a short script. Both figures were re-measured against the
+working tree for this entry rather than carried forward.
+
+The week's work was again a correctness pass over this page rather than
+production, and this time it found where the last few passes had not been
+looking. The rolling log has been re-derived every week; the standing "Working
+stack" section below has not been re-measured since May, because it is labelled
+locked and nothing re-reads it. Three of its claims had gone stale underneath the
+log that was correcting the same facts.
+
+- **Captions were described backwards.** The stack section said captions were
+  generated from the presenter track. They are not, and have not been since May:
+  the per-beat caption tracks that ship with the takes are assembled into one
+  master SRT and baked as a vector overlay, which is why technical terms come out
+  exact. This page has said so correctly in the log since late May while saying
+  the opposite in the section below it. The section now agrees with the log.
+- **Presenter-corner decoration is not manual.** The stack section described the
+  node-tree compositing as hand-authored. The default lane has been headless for
+  some time — it bakes the corner element, the wipes, and the chrome off the
+  editor as transparent alpha intermediates. The interactive node-tree lane still
+  exists and is carried by the launch-cohort episodes.
+- **Loudness is a post-render pass, not a mixer pass.** Corrected to the two-pass
+  filter the pipeline actually runs.
+- **One episode was swept into a claim that was false of it.** The note about a
+  second Fusion delivery lane said "the launch cohort", which this page defines as
+  the channel preview plus the first four episodes. The preview predates that lane
+  and does not carry it. Scoped to the four episodes.
+- **The front matter named the wrong tool for rendering.** It said rendering
+  happens in the design tool. The design tool authors the per-video bundle; the
+  B-roll is rendered with Remotion, the presenter and voice generated with HeyGen,
+  and composition and finishing run in DaVinci Resolve Studio. All four were
+  already named further down this page.
+
+None of this changes anything about the published episodes: the same eight are
+live, built through the same pipeline, and the release records behind them are
+untouched. What changed is that a section marked locked is no longer exempt from
+the weekly re-measure — being locked meant its content was settled, not that its
+claims stopped being checkable.
+
+What's coming up:
+
+- The public flip for the launch-cohort shorts, once the ending decision lands.
+- The held app-UI episodes, resumed once the refreshed shell ships.
+- The next Topic-1, Topic-2, and Topic-3 episodes from the current script cohort.
 
 ---
 
@@ -643,13 +700,22 @@ What's coming up:
   ones (now a per-phase pipeline). The wrapper handles import, two-aspect timeline
   setup, A-roll comping with breath gaps, B-roll cue placement at
   marker frames, and back-to-back YouTube-master + Shorts render.
-  Fusion node-tree authoring (presenter PIP corner ring + soft shadow,
-  Shorts inset band, per-cue compositing) is manual at v1, guided
-  by per-skill node-tree force-graph diagrams.
-- **Captions + loudness.** Resolve native subtitle generation from
-  the A-roll track (V4 burn-in plus sidecar SRT for upload
-  metadata); Fairlight loudness normalization to −14 LUFS / −1 dBTP
-  on the master bus.
+  Presenter-corner decoration runs two lanes. The default lane is
+  headless: it bakes the picture-in-picture element, the wipes, and
+  the chrome off the editor as transparent alpha intermediates, so
+  nothing leaks by construction. A second lane keeps the rich Fusion
+  node-tree comps for interactive delivery, and is carried by the
+  launch-cohort episodes. Both read one layout sidecar, so the two
+  lanes cannot diverge.
+- **Captions + loudness.** Captions are typeset, not transcribed: the
+  per-beat caption tracks that ship with the takes are
+  offset-assembled into one master SRT and baked as a vector text
+  overlay, so technical terms are exact by construction. The same SRT
+  is what goes up as the upload's caption file, so burn-in and upload
+  cannot drift. Loudness is normalized deterministically to the
+  −14 LUFS / −1 dBTP voice-content target by a two-pass filter applied
+  after render, rather than a hand-tuned mixer pass, so the level is
+  reproducible on every bake.
 - **Music + SFX.** YouTube Audio Library (free, no-attribution-
   required filter, monetization-safe); per-topic register pivot
   (T1 ambient electronic / T2 string-pad / etc.). SFX library
@@ -807,8 +873,9 @@ branded next-video outro), mastering, review render, final render — alongside
 `outro.json`, a shared layout module, and `retime_markers.py`, a cue-key →
 SRT-phrase resolver that emits the per-episode marker CSVs from the actual take
 SRTs. Shorts run `phase9_shorts.py` out of the short's own directory, off the
-editor entirely. The launch cohort additionally carries a second assembly and
-decoration lane for interactive Fusion delivery; the default lane is headless.
+editor entirely. The four launch-cohort episodes additionally carry a second
+assembly and decoration lane for interactive Fusion delivery; the channel preview
+predates it. The default lane is headless.
 The earlier monolithic `assemble.py` driver was retired channel-wide on
 2026-05-19.
 

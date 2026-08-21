@@ -1,6 +1,6 @@
 # qexplaining-public — status
 
-_Snapshot: 2026-08-14. Refreshed weekly (Fridays) during the
+_Snapshot: 2026-08-21. Refreshed weekly (Fridays) during the
 2026-06-01 → 2026-12-01 drive window._
 
 Release status of the 50-video explainer arc (5 topics × 10 subjects).
@@ -30,14 +30,14 @@ five topics:
 
 The full roster, live and upcoming, renders at
 <https://quantapix.com/videos>. The master plan — all 50 subjects,
-profile-area tagged, in shootable order — is locked; the per-episode production
-pipeline is operational and has reproduced every live episode end-to-end from
-scratch.
+profile-area tagged, in shootable order — is locked, and the per-episode
+production pipeline is operational: the full per-phase driver set is in place for
+every episode that has reached production.
 
 The live table above is the authoritative count. The progress counters on the
 public status page derive "rendered" from finished cuts on disk rather than from
 the tracked release records, so that one figure varies with which workstation
-took the snapshot; it is being re-derived from the release records.
+took the snapshot. The live count here does not.
 
 No vertical shorts are public yet. The four launch-cohort shorts were cut,
 finished, and uploaded in late June; they have been held unlisted since, pending
@@ -46,18 +46,19 @@ upload.
 
 ## Pipeline
 
-- **A-roll** — a generated AI presenter (a set of synthesized photo-avatars,
-  rotated per beat-archetype) over a locked synthesized voice; per-beat
+- **A-roll** — a generated AI presenter built on HeyGen Photo Avatar V (a set of
+  synthesized photo-avatars, rotated per beat-archetype) over a locked voice
+  synthesized with HeyGen's Design-a-Voice; per-beat
   generation (one clip + caption track per script beat per aspect) for cheaper
   re-cuts and tighter lipsync. The presenter is generated, not derived from a
   recording of a person.
-- **B-roll** — programmatic, React-based components rendered to a high-quality
-  intermediate, with brand tokens read from a generated module so no raw values
-  leak into renders; plus a Geometry-Nodes background-plate lane for the
-  recursive-tessellation motifs.
-- **Composition + finishing** — a scripted non-linear-editor session via an
-  in-house Python wrapper + a recipe library, run as a per-phase pipeline under a
-  multi-phase operator runsheet. Presenter-corner decoration runs two lanes: a
+- **B-roll** — Remotion: programmatic, React-based components rendered to a
+  high-quality intermediate, with brand tokens read from a generated module so no
+  raw values leak into renders; plus a Blender Geometry-Nodes background-plate
+  lane for the recursive-tessellation motifs.
+- **Composition + finishing** — a scripted DaVinci Resolve Studio session driven
+  by an in-house Python wrapper + a recipe library, run as a per-phase pipeline
+  under a multi-phase operator runsheet. Presenter-corner decoration runs two lanes: a
   default headless lane that bakes the picture-in-picture element, wipes, and
   chrome off the editor as transparent alpha intermediates (leak-safe by
   construction), and a staging lane that keeps the rich node-tree comps for
