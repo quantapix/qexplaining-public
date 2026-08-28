@@ -22,8 +22,8 @@ production files stay in the private working tree.
   roster at <https://quantapix.com/videos>.
 
 **Every episode is AI-narrated.** The presenter is a synthesized avatar over a
-synthesized voice — not a recording of a person — and each upload carries the
-platform's altered-content disclosure.
+synthesized voice, and each upload carries the platform's altered-content
+disclosure.
 
 ## Profile-area tags
 
@@ -161,12 +161,12 @@ rather than by a reader.
   The earlier wording survived four weekly refreshes because nothing
   cross-checked this page's prose against the channel's own release records.
   That check now runs as part of the refresh.
-- **The presenter description is corrected in one more place.** An earlier entry
-  already retracted the claim that the avatars were trained from a real person's
-  stills; the consolidated snapshot still carried the retracted word. The
-  presenter set is generated, and the voice is synthesized. Neither is derived
-  from a recording of a person, and every upload carries the platform's
-  altered-content disclosure.
+- **The presenter description is under review and has been narrowed.** Earlier
+  entries here made a claim about avatar provenance in both directions on
+  different dates. This page no longer makes any provenance claim: it states
+  what it can stand behind — the presenter set is generated, the voice is
+  synthesized, and every upload carries the platform's altered-content
+  disclosure. The provenance wording is with the messaging review.
 - **What this repo publishes is now stated accurately.** The page described a
   seven-file per-episode deliverable set as though those files were browsable
   here. They are not: this repo publishes the master plan and the release status,
@@ -589,9 +589,9 @@ layered-scaffolding pipeline.
   rotated per beat-archetype: priority 1 hand-down (channel default;
   declarative narration spine), priority 2 hand-up (contemplative
   beats), priority 3 head + shoulders (PIP / lower-third / B-roll
-  cutaway). The presenter is generated, not a recording of a person —
-  earlier copy here described the avatars as trained from a real
-  person's source stills, which was wrong and is corrected in place.
+  cutaway). The presenter is generated; this page makes no claim about
+  the provenance of the avatar source imagery, which is with the
+  messaging review.
   Pose rotation is per-episode creative texture, not identity drift —
   any change to the three pinned avatar identities is a channel-rebrand
   event.

@@ -8,8 +8,8 @@ Companion to the [README](./README.md), whose rolling `Status — <date>` log
 carries the per-week detail; this file is the consolidated current snapshot.
 
 **Every episode is AI-narrated.** The presenter is a synthesized avatar over a
-synthesized voice — not a recording of a person — and each upload carries the
-platform's altered-content disclosure.
+synthesized voice, and each upload carries the platform's altered-content
+disclosure.
 
 ## Overall
 
@@ -50,8 +50,7 @@ upload.
   synthesized photo-avatars, rotated per beat-archetype) over a locked voice
   synthesized with HeyGen's Design-a-Voice; per-beat
   generation (one clip + caption track per script beat per aspect) for cheaper
-  re-cuts and tighter lipsync. The presenter is generated, not derived from a
-  recording of a person.
+  re-cuts and tighter lipsync. The presenter is generated.
 - **B-roll** — Remotion: programmatic, React-based components rendered to a
   high-quality intermediate, with brand tokens read from a generated module so no
   raw values leak into renders; plus a Blender Geometry-Nodes background-plate
