@@ -1,6 +1,6 @@
 # qexplaining-public — status
 
-_Snapshot: 2026-08-21. Refreshed weekly (Fridays) during the
+_Snapshot: 2026-08-21. Refreshed per release run during the
 2026-06-01 → 2026-12-01 drive window._
 
 Release status of the 50-video explainer arc (5 topics × 10 subjects).

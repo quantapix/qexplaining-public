@@ -5,7 +5,7 @@
 > graphics. Brand-synced with the two product sites and the two
 > product app shells.
 
-A weekly-refreshed window into the explainer arc that runs alongside
+A regularly refreshed window into the explainer arc that runs alongside
 the private working repository. The output of the work is **scripts**
 (plus the data behind every graphic); the per-video design bundle is
 authored in Claude Design, the B-roll is rendered with Remotion, the
@@ -827,7 +827,7 @@ fails a real production take. So far it hasn't.
 
 ## Cadence
 
-Refreshed weekly from the private working tree. Outline edits, new
+Refreshed per release run from the private working tree. Outline edits, new
 profile-area tags, and finalised scripts are committed as ordinary
 diffs — the commit log is the change record.
 
@@ -880,7 +880,7 @@ The earlier monolithic `assemble.py` driver was retired channel-wide on
 2026-05-19.
 
 What this repo publishes is the master plan above and the release status in
-[`STATUS.md`](./STATUS.md) — refreshed weekly as ordinary diffs, so the commit
+[`STATUS.md`](./STATUS.md) — refreshed per release run as ordinary diffs, so the commit
 log is the change record.
 
 Authored by a sole developer working with an AI assistant (Claude Code) under written CLAUDE.md contracts — methodology in [qagents-public](https://github.com/quantapix/qagents-public).
