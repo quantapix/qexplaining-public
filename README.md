@@ -38,6 +38,49 @@ topic is **shootable order** — earlier subjects motivate later ones.
 
 ---
 
+## Status — 2026-09-18
+
+No new episode went public since the last entry, and none entered production.
+The eight live episodes hold on YouTube and the channel CDN; the most recent is
+still the semantic-search episode, public since mid-July. No vertical short is
+public: the four launch-cohort shorts remain uploaded and unlisted, pending the
+decision on their ending. The full roster renders at
+<https://quantapix.com/videos>.
+
+Plan progress is unchanged: 19 of the 50 subjects carry a full narration script,
+seven of those also a short script. Both figures were re-measured against the
+working tree for this entry.
+
+This is the first dated entry since 2026-08-21. The three weeks in between
+produced no episode work, so there was nothing to log. The page now says it is
+refreshed regularly rather than weekly, because weekly is not what it has been.
+
+One claim on this page was wrong, and it was wrong when it was written:
+
+- **Seven of the eight published episodes carry a release record, not all
+  eight.** The 2026-07-24 entry said every published episode now carries its
+  release date and immutable CDN key in its own episode record. Measured
+  against the working tree, the pilot episode (1.1, public since 2026-06-09)
+  never received one. The back-fill that reconciled the others skipped it. The
+  episode itself is unaffected, and its CDN key and channel listing are
+  unchanged. What is missing is the private record that the plan, the roster
+  page, and the channel were said to agree through. The record is owed.
+  Until it exists, the live table in [`STATUS.md`](./STATUS.md) remains
+  the count to trust.
+- **The progress-counter fix promised on 2026-07-31 has not landed.** The
+  "rendered" figure on the public status page is still derived from finished
+  cuts on disk, so it still varies with the machine that took the snapshot.
+  The fix depends on the release records above being complete, so it follows
+  the 1.1 record rather than preceding it.
+
+What's coming up:
+
+- The public flip for the launch-cohort shorts, once the ending decision lands.
+- The held app-UI episodes, resumed once the refreshed shell ships.
+- The next Topic-1, Topic-2, and Topic-3 episodes from the current script cohort.
+
+---
+
 ## Status — 2026-08-21
 
 No new episode went public this week, and none entered production. The eight
@@ -683,8 +726,9 @@ What's coming up:
 
 ## Working stack (locked)
 
-- **A-roll (voice + face).** HeyGen Photo Avatar V against a single
-  locked still. Voice generated via HeyGen's Design-a-Voice (channel
+- **A-roll (voice + face).** HeyGen Photo Avatar V — a set of three
+  generated avatars, rotated per beat-archetype. Voice generated via
+  HeyGen's Design-a-Voice (channel
   voice locked retroactively to the production preview at
   <https://videos.quantapix.com/janet-preview.mp4>). Per-beat
   generation — one MP4 + sidecar SRT per script beat per aspect —

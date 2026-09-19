@@ -1,6 +1,6 @@
 # qexplaining-public — status
 
-_Snapshot: 2026-08-21. Refreshed per release run during the
+_Snapshot: 2026-09-18. Refreshed per release run during the
 2026-06-01 → 2026-12-01 drive window._
 
 Release status of the 50-video explainer arc (5 topics × 10 subjects).
@@ -68,10 +68,16 @@ upload.
 
 ## What landed recently
 
-- **No new episode this week, and none in production.** The live set holds at
-  eight. The week's working-tree activity was contract and pointer maintenance,
-  not production. Every figure on this page was re-measured for this snapshot
-  rather than carried forward; all of them are unchanged.
+- **No new episode since the last snapshot, and none in production.** The live
+  set holds at eight; no short is public. Every figure on this page was
+  re-measured for this snapshot rather than carried forward, and all of them are
+  unchanged.
+- **Release records: seven of eight, a correction.** The earlier claim that
+  every published episode carries its release record in its episode file was
+  wrong from the start. The pilot (1.1) has none. The episode, its CDN key, and
+  its channel listing are unaffected. The live table above does not depend on
+  those records and remains the authoritative count. Detail in the README's
+  rolling log.
 - **The per-episode working shape is corrected.** The seven-file shape this
   repo has described is the launch cohort's; the four episodes published after
   it carry three or four of those files, because three of the seven were prose
@@ -103,9 +109,9 @@ upload.
   shells holds final production until the refreshed shell ships, then re-skins
   those graphics against the real interface rather than a mock. Non-UI material
   for those episodes proceeds under the B-roll-first gate.
-- **Release records reconciled.** Every published episode now carries its release
-  date and immutable CDN key in the episode record, so the plan, the roster page,
-  and the channel agree without a manual cross-check.
+- **Release records reconciled for seven of the eight published episodes**, each
+  carrying its release date and immutable CDN key in the episode record. The
+  pilot's record is owed (see above).
 - **Arc progress is a dashboard.** The 50-row arc matrix on the public status
   page is now a dashboard: a four-card progress strip (scripted / designed /
   recorded / rendered) plus per-topic filter chips over the same rows. A
