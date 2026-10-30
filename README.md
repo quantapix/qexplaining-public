@@ -11,15 +11,15 @@ the private working repository. The output of the work is **scripts**
 authored in Claude Design, the B-roll is rendered with Remotion, the
 presenter and voice are generated with HeyGen, and composition and
 finishing run in DaVinci Resolve Studio. This repo publishes the
-master plan and the weekly release status; the narration scripts and
+master plan and the release status; the narration scripts and
 production files stay in the private working tree.
 
 - Parent organisation: <https://github.com/quantapix>
 - Engineering output: <https://quantapix.com>
 - Motivational record: <https://femfas.net>
 - **Watch: <https://www.youtube.com/@Quantapix>** — the channel where this
-  arc publishes; eight episodes are live (June–July 2026), with the full
-  roster at <https://quantapix.com/videos>.
+  arc publishes; eight episodes (June–July 2026) and four launch-cohort shorts
+  are public, with the full roster at <https://quantapix.com/videos>.
 
 **Every episode is AI-narrated.** The presenter is a synthesized avatar over a
 synthesized voice, and each upload carries the platform's altered-content
@@ -35,6 +35,34 @@ topic is **shootable order** — earlier subjects motivate later ones.
 - **P3** — financial applications (analyzing + accounting → Qresev)
 - **P4** — grounding competing technical-analysis approaches
 - **P5** — agentic software development (Claude Code + monorepo)
+
+---
+
+## Status — 2026-10-30
+
+No new episode went public since the last entry. The eight live episodes hold on
+YouTube and the channel CDN; the most recent is still the semantic-search
+episode, public since mid-July. The full roster renders at
+<https://quantapix.com/videos>.
+
+The four launch-cohort shorts are public on the channel. The 2026-09-18 entry
+below said none was, and on the shorts the earlier entries on this page no
+longer describe the channel.
+
+Plan progress is unchanged: 19 of the 50 subjects carry a full narration script,
+seven of those also a short script. Both figures were re-measured against the
+working tree for this entry.
+
+Two items from the last entry stand as they were:
+
+- **Seven of the eight published episodes carry a release record.** The pilot
+  (1.1) still has none. Its CDN key and channel listing are unaffected, and the
+  live table in [`STATUS.md`](./STATUS.md) remains the count to trust.
+- **The "rendered" figure on the public status page is still derived from
+  finished cuts on disk**, so it still varies with the machine that took the
+  snapshot.
+
+Forward lists in earlier entries are not current.
 
 ---
 

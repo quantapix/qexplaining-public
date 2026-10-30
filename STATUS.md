@@ -1,11 +1,11 @@
 # qexplaining-public — status
 
-_Snapshot: 2026-09-18. Refreshed per release run during the
+_Snapshot: 2026-10-30. Refreshed per release run during the
 2026-06-01 → 2026-12-01 drive window._
 
 Release status of the 50-video explainer arc (5 topics × 10 subjects).
 Companion to the [README](./README.md), whose rolling `Status — <date>` log
-carries the per-week detail; this file is the consolidated current snapshot.
+carries the per-entry detail; this file is the consolidated current snapshot.
 
 **Every episode is AI-narrated.** The presenter is a synthesized avatar over a
 synthesized voice, and each upload carries the platform's altered-content
@@ -39,10 +39,7 @@ public status page derive "rendered" from finished cuts on disk rather than from
 the tracked release records, so that one figure varies with which workstation
 took the snapshot. The live count here does not.
 
-No vertical shorts are public yet. The four launch-cohort shorts were cut,
-finished, and uploaded in late June; they have been held unlisted since, pending
-a decision on the shorts' ending. What holds them is the public flip, not the
-upload.
+The four launch-cohort shorts are public on the channel.
 
 ## Pipeline
 
@@ -68,10 +65,9 @@ upload.
 
 ## What landed recently
 
-- **No new episode since the last snapshot, and none in production.** The live
-  set holds at eight; no short is public. Every figure on this page was
-  re-measured for this snapshot rather than carried forward, and all of them are
-  unchanged.
+- **No new episode since the last snapshot.** The live set holds at eight, plus
+  the four public shorts. Every figure on this page was re-measured for this
+  snapshot rather than carried forward; the shorts are the one change.
 - **Release records: seven of eight, a correction.** The earlier claim that
   every published episode carries its release record in its episode file was
   wrong from the start. The pilot (1.1) has none. The episode, its CDN key, and
@@ -105,31 +101,20 @@ upload.
   wrote it back without re-encoding, crushing near-blacks — it reads as "moody
   dark" rather than broken, so it survives eyeballing. The timeline and output
   colour spaces are now pinned explicitly, and a black-frame check is the gate.
-- **App-UI episodes held.** Any episode whose graphics depict the product app
-  shells holds final production until the refreshed shell ships, then re-skins
-  those graphics against the real interface rather than a mock. Non-UI material
-  for those episodes proceeds under the B-roll-first gate.
 - **Release records reconciled for seven of the eight published episodes**, each
   carrying its release date and immutable CDN key in the episode record. The
-  pilot's record is owed (see above).
+  pilot's record is missing (see above).
 - **Arc progress is a dashboard.** The 50-row arc matrix on the public status
   page is now a dashboard: a four-card progress strip (scripted / designed /
   recorded / rendered) plus per-topic filter chips over the same rows. A
   presentation re-shape — no new numbers.
-
-## Next
-
-- Publish the launch-cohort shorts through the channel's upload path.
-- Resume the held app-UI episodes once the refreshed shell ships.
-- The next block of Topic-1, Topic-2, and Topic-3 episodes from the current
-  script cohort, through the same pipeline.
 
 ## How to verify
 
 - Watch the live episodes: the channel at
   <https://www.youtube.com/@Quantapix>, or the CDN cuts linked from
   <https://quantapix.com/videos>.
-- The master plan above and the weekly release status are what this repo
-  publishes, refreshed as ordinary diffs — the commit log is the change record.
-  The narration scripts and per-episode production files stay in the private
-  working tree.
+- The master plan in the [README](./README.md) and the release status here are
+  what this repo publishes, refreshed as ordinary diffs — the commit log is the
+  change record. The narration scripts and per-episode production files stay in
+  the private working tree.
