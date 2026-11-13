@@ -38,6 +38,33 @@ topic is **shootable order** — earlier subjects motivate later ones.
 
 ---
 
+## Status — 2026-11-13
+
+No new episode went public since the last entry. The eight live episodes hold on
+YouTube and the channel CDN, and the four launch-cohort shorts remain public on the
+channel. The most recent long-form episode is still the semantic-search episode,
+public since mid-July.
+
+Plan progress is unchanged: 19 of the 50 subjects carry a full narration script,
+seven of those also a short script. Both figures were re-measured against the
+working tree for this entry.
+
+The roster page at <https://quantapix.com/videos> still shows the four shorts as
+upcoming. It is generated from a release list that was last refreshed before the
+shorts went public. The channel is the current record for the shorts until that
+list is regenerated.
+
+Two items from earlier entries stand as they were:
+
+- **Seven of the eight published episodes carry a release record.** The pilot
+  (1.1) still has none. Its CDN key and channel listing are unaffected, and the
+  live table in [`STATUS.md`](./STATUS.md) remains the count to trust.
+- **The "rendered" figure on the public status page is still derived from
+  finished cuts on disk**, so it still varies with the machine that took the
+  snapshot.
+
+---
+
 ## Status — 2026-10-30
 
 No new episode went public since the last entry. The eight live episodes hold on
