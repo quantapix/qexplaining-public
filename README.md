@@ -259,12 +259,6 @@ rather than by a reader.
   The earlier wording survived four weekly refreshes because nothing
   cross-checked this page's prose against the channel's own release records.
   That check now runs as part of the refresh.
-- **The presenter description is under review and has been narrowed.** Earlier
-  entries here made a claim about avatar provenance in both directions on
-  different dates. This page no longer makes any provenance claim: it states
-  what it can stand behind — the presenter set is generated, the voice is
-  synthesized, and every upload carries the platform's altered-content
-  disclosure. The provenance wording is with the messaging review.
 - **What this repo publishes is now stated accurately.** The page described a
   seven-file per-episode deliverable set as though those files were browsable
   here. They are not: this repo publishes the master plan and the release status,
@@ -682,14 +676,7 @@ layered-scaffolding pipeline.
 - **All three earlier production episodes migrated** (1.1 + 1.5 +
   2.1). Same 7-phase shape across the channel; per-episode
   `PRODUCTION.md` runsheets are the operator's source of truth.
-- **Three-avatar presenter set** locked since 2026-05-11. Three
-  synthesized photo-avatars over one locked synthesized voice (2026-05-07),
-  rotated per beat-archetype: priority 1 hand-down (channel default;
-  declarative narration spine), priority 2 hand-up (contemplative
-  beats), priority 3 head + shoulders (PIP / lower-third / B-roll
-  cutaway). The presenter is generated; this page makes no claim about
-  the provenance of the avatar source imagery, which is with the
-  messaging review.
+- **Three-avatar presenter set** locked since 2026-05-11. The presenter is generated.
   Pose rotation is per-episode creative texture, not identity drift —
   any change to the three pinned avatar identities is a channel-rebrand
   event.
@@ -781,11 +768,9 @@ What's coming up:
 
 ## Working stack (locked)
 
-- **A-roll (voice + face).** HeyGen Photo Avatar V — a set of three
+- **A-roll (voice + face).** A set of three
   generated avatars, rotated per beat-archetype. Voice generated via
-  HeyGen's Design-a-Voice (channel
-  voice locked retroactively to the production preview at
-  <https://videos.quantapix.com/janet-preview.mp4>). Per-beat
+  HeyGen's Design-a-Voice. Per-beat
   generation — one MP4 + sidecar SRT per script beat per aspect —
   rather than monolithic takes; cheaper re-cuts, tighter lipsync.
 - **B-roll (cards + graphics + animations).** Remotion: React-based
@@ -847,12 +832,12 @@ fails a real production take. So far it hasn't.
 
 *Profile mix: **P2** dominant, P1 supporting, P5 cameo.*
 
-1. **When a Docket and Its Record Disagree — Why I Built Qnarre** [P2] A real docket, dispositions misread, a brief built on a wrong premise. Why Qnarre's first job is procedural posture. · Short: "When the Docket and the Record Disagree"
+1. **When a Docket and Its Record Disagree — Why I Built Qnarre** [P2] Why Qnarre's first job is procedural posture. · Short: "When the Docket and the Record Disagree"
 2. **What a "Narrative" Is, Formally — Predicates Over Named Entities** [P1, P2] A story is a graph plus a calendar. Actors, acts, edges, time; the narrative reduces to a Lean structure.
 3. **Three-Zone Qnarre — Input, Kernel, Witness** [P2, P5] A tour of the live `/app` island: docx/text in (left), kernel elaboration (middle), witness + fail trace (right).
 4. **Watching a Proof Elaborate Live — SSE Event Streaming** [P2, P5] 12 seconds of a real Lean elaboration as a stream of `{stage, msg, kind}` events; the events drive the React island's colors.
 5. **From DOCX to Lean — How a Complaint Becomes a Claim Object** [P2] A paragraph of pleading mapped to four structured predicates. Extraction → predicate match → axiom selection → theorem assembly.
-6. **When the Appendix Is the Source of Truth — RAv:p Record Citations** [P2] Every assertion carries `RAII:203`. 10-vol Combined Record Appendix; ground-truth pagination by footer stamp; never cite raw filings on appeal.
+6. **When the Appendix Is the Source of Truth — RAv:p Record Citations** [P2] ground-truth pagination by footer stamp; never cite raw filings on appeal.
 7. **Pro Se on Appeal — Encoding the Procedural Traps as Predicates** [P2] The asymmetry between counsel and pro se on procedural traps. Rule 4(a), tolling motions, the SO 2-99 page ceiling — encoded as predicates so a brief doesn't trip them. · Short: "The Procedural Traps, Made Explicit"
 8. **Counterfactual Narratives — What a Defense Story Has to Deny** [P1, P2] Every theorem has a contrapositive. Opposing counsel's narrative as a competing predicate set; Qnarre shows which axioms they would need.
 9. **Stacking Predicates — Civil RICO and § 1983 Over One Fact File** [P1, P2] One fact pattern, two statutory frames, one kernel. Shared facts file, framework-specific axioms, theorems compose.
@@ -898,7 +883,7 @@ fails a real production take. So far it hasn't.
 
 *Profile mix: **P5** dominant, all others as illustrations.*
 
-1. **Two Teammates, One Repo — What the Practice Looks Like** [P5] Sole developer + expert AI assistant; narrow team, wide repo, explicit `CLAUDE.md` contracts at every boundary. · Short: "Two People, One Repo"
+1. **Two Teammates, One Repo — What the Practice Looks Like** [P5] Sole developer + expert AI assistant; narrow team, wide repo, explicit `CLAUDE.md` contracts at every boundary.
 2. **The Monorepo Tour — Subprojects, One Venv, One Workspace** [P5] Sixty seconds, every subproject. Cytoscape repo map; edges are shared-data hubs. · Short: "The Monorepo in 60 Seconds"
 3. **Claude Code as the Third Teammate — Agents You Can Fire** [P5] A sub-agent that did one job and vanished. Per-task agents; when to spawn vs. inline; `CLAUDE.md` as the contract.
 4. **CLAUDE.md — Instructions for the Colleague Who Never Reads Twice** [P5] A short, harsh `CLAUDE.md` beats a long polite one. Rules over preferences; pointers over prose; the trim discipline.
