@@ -1,6 +1,6 @@
 # qexplaining-public — status
 
-_Snapshot: 2026-11-13. Refreshed per release run during the
+_Snapshot: 2026-11-21. Refreshed per release run during the
 2026-06-01 → 2026-12-01 drive window._
 
 Release status of the 50-video explainer arc (5 topics × 10 subjects).
@@ -43,8 +43,7 @@ The four launch-cohort shorts are public on the channel.
 
 ## Pipeline
 
-- **A-roll** — a generated AI presenter built on HeyGen Photo Avatar V (a set of
-  synthesized photo-avatars, rotated per beat-archetype) over a locked voice
+- **A-roll** — a generated AI presenter over a locked voice
   synthesized with HeyGen's Design-a-Voice; per-beat
   generation (one clip + caption track per script beat per aspect) for cheaper
   re-cuts and tighter lipsync. The presenter is generated.
@@ -67,9 +66,9 @@ The four launch-cohort shorts are public on the channel.
 
 - **No new episode since the last snapshot.** The live set holds at eight, plus
   the four public shorts. Every figure on this page was re-measured for this
-  snapshot rather than carried forward. The roster page at
-  <https://quantapix.com/videos> still lists the shorts as upcoming; the channel
-  is the current record for them.
+  snapshot rather than carried forward. The release list behind
+  <https://quantapix.com/videos> was regenerated on 2026-11-14 and still marks
+  the shorts as upcoming; the channel is the current record for them.
 - **Release records: seven of eight, a correction.** The earlier claim that
   every published episode carries its release record in its episode file was
   wrong from the start. The pilot (1.1) has none. The episode, its CDN key, and

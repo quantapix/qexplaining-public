@@ -38,6 +38,33 @@ topic is **shootable order** — earlier subjects motivate later ones.
 
 ---
 
+## Status — 2026-11-21
+
+No new episode went public since the last entry, and no episode work happened in
+the interval. The eight live episodes hold on YouTube and the channel CDN, and
+the four launch-cohort shorts remain public on the channel.
+
+Plan progress is unchanged: 19 of the 50 subjects carry a full narration script,
+seven of those also a short script. Both figures were re-measured against the
+working tree for this entry.
+
+One explanation in the last entry no longer holds. It said the roster page's
+release list predated the shorts going public. That list was regenerated on
+2026-11-14 and still marks all four shorts as upcoming, because the shorts'
+entries in it were never updated. The channel is the current record for the
+shorts until those entries are.
+
+Two items from earlier entries stand as they were:
+
+- **Seven of the eight published episodes carry a release record.** The pilot
+  (1.1) still has none. Its CDN key and channel listing are unaffected, and the
+  live table in [`STATUS.md`](./STATUS.md) remains the count to trust.
+- **The "rendered" figure on the public status page is still derived from
+  finished cuts on disk**, so it still varies with the machine that took the
+  snapshot.
+
+---
+
 ## Status — 2026-11-13
 
 No new episode went public since the last entry. The eight live episodes hold on
@@ -879,7 +906,7 @@ fails a real production take. So far it hasn't.
 
 ---
 
-## Topic 5 — About Quantapix… the two-teammate practice
+## Topic 5 — About Quantapix… the two-teammate practice (one engineer + an AI assistant)
 
 *Profile mix: **P5** dominant, all others as illustrations.*
 
